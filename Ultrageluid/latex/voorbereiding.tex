@@ -12,27 +12,24 @@ B = -\frac{\Delta P}{\frac{\Delta V}{V}} = - V \frac{\partial P}{\partial V}
 \figuur{width=0.4\textwidth}{bulk}{Bulk modulus}
 
 In dit model wordt er een cylinderkolom van een vloeistof beschouwd. De 
-uitwijkingen zijn enkel volgens de $x$-co\"ordinaat. Een cylinder van lengte 
-$\Delta x$ en oppervlakte $A$ heeft als volume $A \Delta x$.
+uitwijkingen zijn enkel volgens de $x$-co\"ordinaat. De uitwijking van de 
+vloeistofdeeltjes oorspronkelijk op co\"ordinaat $x$ en op het tijdstip $t$ 
+wordt voorgesteld door $u(x,t)$. Een infinitesimale cylinder van lengte $dx$ en 
+oppervlakte $A$ heeft als volume $A dx$.
 
-\begin{equation}
-\label{bulkmod1d}
-B = -A \Delta x \frac{\partial P}{\partial( A x)} = -\Delta x \frac{\partial 
-P}{\partial x}
-\end{equation}
+$$
+B = -A dx \frac{\Delta P}{\Delta(A dx)} = -dx \frac{P(x+dx,t)-P(x,t)}{ 
+u(x+dx,t)-u(x,t)}
+$$
+$$
+$$
 
-De uitwijking van de vloeistofdeeltjes oorspronkelijk op co\"ordinaat $x$ en op 
-het tijdstip $t$ wordt voorgesteld door $u(x,t)$. De wet van Newton voor een 
-infinitesimale cylinder wordt dan
+De wet van Newton voor de cylinder wordt
 \begin{align*}
 F &= ma \\
 P(x)A - P(x+dx)A &= \rho A dx \frac{ \partial^2 u}{\partial t^2} \\
 \frac{\partial P}{\partial x} + \rho \frac{ \partial^2 u}{\partial t^2} &= 0
-
 \end{align*}
-
-Kasper is mooi.
-
 
 \subsection{Puls-echo methode}
 De meest voor de hand liggende manier om de geluidssnelheid te bepalen is meten 
