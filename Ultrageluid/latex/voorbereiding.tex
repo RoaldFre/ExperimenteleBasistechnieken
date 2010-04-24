@@ -3,31 +3,30 @@
 
 In vervormbare materialen is er voor kleine vervormingen een lineair verband 
 tussen de relatieve volumeverandering en de druk nodig voor deze 
-volumeverandering. De verhoudingsconstante is de bulkmodulus en is eigen aan 
-elk materiaal.
+volumeverandering. Voor een illustratie, zie figuur (\ref{bulk}). De 
+verhoudingsconstante is de bulkmodulus en is eigen aan elk materiaal.
 \begin{equation}
 \label{bulkmod}
 B = -\frac{\Delta P}{\frac{\Delta V}{V}} = - V \frac{\Delta P}{\Delta V}
 \end{equation}
-
 \figuur{width=0.7\textwidth}{bulk}{Bulk modulus}
 
 In dit model wordt er een cylinderkolom van een vloeistof beschouwd. De 
 uitwijkingen zijn enkel volgens de $x$-co\"ordinaat. De uitwijking van de 
 vloeistofdeeltjes oorspronkelijk op co\"ordinaat $x$ en op het tijdstip $t$ 
 wordt voorgesteld door $u(x,t)$. Een infinitesimale cylinder van lengte $dx$ en 
-oppervlakte $A$ heeft als volume $A dx$. 
-
-De uitwijking van de druk $P$ boven de atmosferische druk $P_0$ is $p$
+oppervlakte $A$ heeft als volume $A dx$.  De uitwijking van de druk $P$ boven 
+de atmosferische druk $P_0$ is $p$
 $$
 p = \Delta P = P - P_0
 $$
-Hiermee kan de uitdrukking voor de bulkmodulus (\ref{bulkmod}) herscheven 
-worden in functie van de uitwijking van de druk.
+
+Hiermee kan de uitdrukking voor de bulkmodulus (\ref{bulkmod}) voor dit model 
+herschreven worden tot
 $$
 B = -A dx \frac{\Delta P}{\Delta V} = -dx \frac{\Delta P}{ u(x+dx,t)-u(x,t)}
 $$
-De uitdrukking voor de druk kan hieruit worden ge\"isoleerd
+De uitdrukking voor de drukuitwijking kan hieruit ge\"isoleerd worden
 \begin{equation}
 \label{bulkmod1d}
 p = \Delta P = -B \frac{u(x+dx,t)-u(x)}{dx} = -B \partieel{u}{x}
@@ -58,20 +57,20 @@ een golf is eenvoudigweg
 v = \sqrt{\frac{B}{\rho}}
 \end{equation}
 
-De waardes voor de dichtheid en de bulkmodulus kunnen we opzoeken. Zo kan men 
-voor een materiaal de geluidssnelheid berekenen. De resultaten voor enkele 
+De waardes voor de dichtheid en de bulkmodulus kunnen worden opgezocht. Zo kan 
+men voor een materiaal de geluidssnelheid berekenen. De resultaten voor enkele 
 materialen staan in tabel \ref{speedtable}. 
 
 \begin{table}[htb]
 \caption{Berekende geluidsnelheid}
 \label{speedtable}
 \begin{center}
-\begin{tabular}{c||ccc}
+\begin{tabular}{c||lcc}
 Materiaal & $B$ (Pa) & $\rho$ $(\textrm{kg/m}^3)$ & $v$ (m/s) \\\hline
-lucht & $1.42 \cdot 10^5$ & 1.2 & 344 \\
-water & $2.18 \cdot 10^9$ & 1000 & 1477 \\
-glycerol & $4.35 \cdot 10^9$ & 1200 & 1900 \\
-staal & $160 \cdot 10^9$ & 7900 & 4500 \\
+lucht	& $1.42 \cdot 10^5$	& 1.2  & 344 \\
+water	& $2.18 \cdot 10^9$	& 1000 & 1477 \\
+glycerol& $4.35 \cdot 10^9$	& 1200 & 1900 \\
+staal	& $1.60 \cdot 10^{11}$	& 7900 & 4500 \\
 \end{tabular}
 \end{center}
 \end{table}
@@ -84,20 +83,22 @@ ertussen $L$ is, is de snelheid eenvoudigweg
 $$
 v = \frac{L}{\Delta t}
 $$
-In de resonantiekamer kan een enkele puls enkele keren heen en weer blijven 
-reflecteren. Telkens reflecteert een vaste fractie van de amplitude, de 
-reflectieco"effici"ent. Ook worden de golfpakketjes verstrooid door dispersieve 
-effecten. Een typische waarneming werd gesimuleerd en weergegeven in figuur 
-\ref{puls-echo}. Een voordeel van het gebruiken van een resonantiekamer is dat
-men meerdere waarnemingen in \'e\'en keer kan doen.
+In de resonantiekamer kan een enkele puls een aantal keer heen en weer 
+reflecteren. Telkens heeft de gereflecteerde puls maar een fractie van de 
+amplitude van de oorspronkelijke puls, de verhouding gegeven door de 
+reflectieco"effici"ent.  Ook worden de golfpakketjes verstrooid door 
+dispersieve effecten. Een typische waarneming werd gesimuleerd en weergegeven 
+in figuur \ref{puls-echo}. 
 
 \figuurOctave{puls-echo}{Gereflecteerde echo's met een reflectieco"effici\"ent 
 van 0.7}
 
+Een voordeel van het gebruiken van een resonantiekamer is dat
+men meerdere waarnemingen in \'e\'en keer kan doen.
 Deze methode heeft slechts een beperkte nauwkeurigheid. Door dispersie 
 verstrooien de pulsen waardoor ze moeilijker te localiseren zijn.
 
-\subsection{Staande golf methode}
+\subsection{Resonantie methode}
 
 In een resonantiekamer kan men een verfijndere methode gebruiken. Er worden 
 geluidsgolven uitgestuurd van een zeer hoge frequentie, in de orde van enkele 
@@ -107,13 +108,22 @@ reflecteert heen en weer in de kamer en verliest zijn energie maar dit keer
 worden er ook nieuwe pulsen uitgestuurd. Afhankelijk van wanneer de pulsen 
 uitgestuurd worden, interfereren ze constructief of destructief met elkaar. De 
 sterkste constructieve interferentie doet zich voor wanneer de frequentie van 
-de uitgezonden pulsen \'e\'en van de resonantiefrequenties zijn. Deze 
-interferentie doet zich voor wanneer een puls een geheel aantal keer de lengte 
-van de resonantiekamer heeft afgelegd en is teruggekeerd voor een nieuwe puls 
-wordt uitgestuurd.
+de uitgezonden pulsen \'e\'en van de resonantiefrequenties zijn. Dit valt voor 
+wanneer een puls een geheel aantal keer de lengte van de resonantiekamer heeft 
+afgelegd en is teruggekeerd voor een nieuwe puls wordt uitgestuurd.
 \begin{equation}
 \label{resfreq}
 f_n = \frac{1}{T_n} = \frac{1}{n} \frac{v}{2L}
+\end{equation}
+De fundamentele resonantiefrequentie noemen we $\freso$.
+$$
+\freso = f_1 = \frac{v}{2L}
+$$
+Als men nu de resonantiefrequentie experimenteel kan bepalen kan men hieruit de 
+snelheid berekenen
+\begin{equation}
+\label{v-ifv-f}
+v = 2nLf_n = 2L \freso
 \end{equation}
 In het ideale geval zou elke puls uit slechts \'e\'en cyclus van de draaggolf 
 hoeven bestaan. Men zou dan die puls enkel moeten laten overeenkomen met zijn 
@@ -126,9 +136,7 @@ met elke puls. Ook blijft het geen mooi geheel. Door dispersie wordt de puls
 verstrooid wat de waarnemingen bemoeilijkt. Bredere pulsen hebben hier minder 
 last van.
 
-%% ROALD %%
-% Figuur van disperserende puls?
-%%%%%%%%%%%
+\figuurOctave{dispersie}{Impressie van een disperserende puls}
 
 Anderzijds mag men ook niet teveel cycli per puls uitzenden. Het wordt dan 
 moeilijker om de resonantie-effecten van het uitgezonden signaal te 
