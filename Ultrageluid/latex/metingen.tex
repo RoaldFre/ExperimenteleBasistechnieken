@@ -1,5 +1,5 @@
 \newcommand{\relPiekAmp}{
-\begin{table}[h!t!b!]
+\begin{table}[htb]
 \caption{Relatieve piekamplituden bij de resonantiefrequenties}
 \label{relPiekAmp}
 \begin{center}
@@ -32,6 +32,27 @@
 \end{center}
 \end{table}
 }
+
+
+\newcommand{\waterDelay}{
+\begin{table}[htb]
+\caption{Echo delay meting voor water}
+\label{waterDelay}
+\begin{center}
+\begin{tabular}{ r | r@{}l | r@{}l }
+\multicolumn{1}{c|}{$n$}&
+\multicolumn{2}{c|}{$v$ (km/s)}&
+\multicolumn{2}{c}{$\Delta v$ (km/s)}\\\hline
+6&	1&.40&	0&.03\\
+9&	1&.41&	0&.02\\
+11&	1&.43&	0&.02\\
+13&	1&.43&	0&.02\\
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+
 
 
 
@@ -173,12 +194,29 @@ v = 2L\freso
 = (1.42 \pm 0.01)\,\rm km/s
 $$
 
+De resonantiemethode levert dus een waarde voor de geluidssnelheid met een 
+behoorlijke nauwkeurigheid van drie beduidende cijfers (met een kleine fout 
+op het laatste cijfer).
 
+De literatuurwaarde voor de snelheid van geluid in water bij $20\grad$C is 
+$1.48\,$km/s. Onze gevonden waarde zit daar (veel) boven. Hoewel het water 
+bij de proefneming een iets lagere temperatuur had ($18.5\grad$C), is deze 
+afwijking te groot om verklaard de worden door enkel en alleen het 
+temperatuursverschil. Een controle werd uitgevoerd in de vorm van de 
+puls-echo methode.
 
+\subsection{Vergelijking met de puls-echo methode}
+Via de puls-echo methode werd een tweede maal de geluidssnelheid in water 
+berekend. De resultaten worden weergegven in tabel \ref{delayWater}
 
+\delayWater
 
 impurities
 theorie: 1477 
+
+
+
+
 
 
 
