@@ -6,7 +6,7 @@ volumeverandering. De verhoudingsconstante is de bulkmodulus en is eigen aan
 elk materiaal.
 \begin{equation}
 \label{bulkmod}
-B = -\frac{\Delta P}{\frac{\Delta V}{V}} = - V \frac{\partial P}{\partial V}
+B = -\frac{\Delta P}{\frac{\Delta V}{V}} = - V \frac{\Delta P}{\Delta V}
 \end{equation}
 
 \figuur{width=0.4\textwidth}{bulk}{Bulk modulus}
@@ -15,21 +15,40 @@ In dit model wordt er een cylinderkolom van een vloeistof beschouwd. De
 uitwijkingen zijn enkel volgens de $x$-co\"ordinaat. De uitwijking van de 
 vloeistofdeeltjes oorspronkelijk op co\"ordinaat $x$ en op het tijdstip $t$ 
 wordt voorgesteld door $u(x,t)$. Een infinitesimale cylinder van lengte $dx$ en 
-oppervlakte $A$ heeft als volume $A dx$.
+oppervlakte $A$ heeft als volume $A dx$. 
 
+De uitwijking van de druk $P$ boven de atmosferische druk $P_0$ is $p$
 $$
-B = -A dx \frac{\Delta P}{\Delta(A dx)} = -dx \frac{P(x+dx,t)-P(x,t)}{ 
-u(x+dx,t)-u(x,t)}
+p = \Delta P = P - P_0
 $$
+Hiermee kan de uitdrukking voor de bulkmodulus (\ref{bulkmod}) herscheven 
+worden in functie van de uitwijking van de druk.
 $$
+B = -A dx \frac{\Delta P}{\Delta V} = -dx \frac{\Delta P}{ u(x+dx,t)-u(x,t)}
 $$
+De uitdrukking voor de druk kan hieruit worden ge\"isoleerd
+\begin{equation}
+\label{bulkmod1d}
+p = \Delta P = -B \frac{u(x+dx,t)-u(x)}{dx} = -B \partieel{u}{x}
+\end{equation}
 
-De wet van Newton voor de cylinder wordt
-\begin{align*}
-F &= ma \\
-P(x)A - P(x+dx)A &= \rho A dx \frac{ \partial^2 u}{\partial t^2} \\
-\frac{\partial P}{\partial x} + \rho \frac{ \partial^2 u}{\partial t^2} &= 0
-\end{align*}
+De wet van Newton ($F = ma$) voor de cylinder wordt
+$$
+P(x)A - P(x+dx)A = (p(x) - p(x+dx))A = \rho A dx \partpart{u}{t}
+$$
+Hierbij is $\rho$ de dichtheid van de vloeistof
+$$
+\partieel{p}{x} + \rho \partpart{u}{t} = 0
+$$
+Hierin kan uitdrukking \ref{bulkmod1d} gesubstitueerd worden
+$$
+-B\partpart{u}{x} + \rho \partpart{u}{t} = 0
+$$
+Na herschrijven wordt dit
+\begin{equation}
+\label{waveeq}
+\partpart{u}{x} - \frac{\rho}{B} \partpart{u}{t} = 0
+\end{equation}
 
 \subsection{Puls-echo methode}
 De meest voor de hand liggende manier om de geluidssnelheid te bepalen is meten 
