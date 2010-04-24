@@ -16,20 +16,6 @@
 
 \renewcommand{\baselinestretch}{1.14}
 
-\newcommand{\partieel}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
-\newcommand{\partpart}[2]{\ensuremath{\frac{\partial^2 #1}{\partial #2^2}}}
-\newcommand{\grad}{\ensuremath{^\circ}}
-
-\newcommand{\Ruit}{\ensuremath{R_{\mathrm{uit}}}}
-\newcommand{\Rtot}{\ensuremath{R_{\mathrm{tot}}}}
-\newcommand{\Vin}{\ensuremath{V_{\mathrm{in}}}}
-\newcommand{\Vuit}{\ensuremath{V_{\mathrm{uit}}}}
-\newcommand{\Iuit}{\ensuremath{I_{\mathrm{uit}}}}
-\newcommand{\Auit}{\ensuremath{A_{\mathrm{uit}}}}
-\newcommand{\Ain}{\ensuremath{A_{\mathrm{in}}}}
-\newcommand{\Vuittheo}{\ensuremath{V_{\mathrm{uit}}^{\mathrm{th}}}}
-\newcommand{\Volt}{\ensuremath{\,\mathrm{V}}}
-
 \newcommand{\figuur}[4][htb]{
     \begin{figure}[#1]
         \begin{center}
@@ -42,19 +28,145 @@
 %\figuur[htb]{width=breedte+eenheid}{naam=label}{caption}
 
 
+% \figuurOctave[htb]{naam=label}{caption}
+\newcommand{\figuurOctave}[3][htb]{
+    \begin{figure}[#1]
+        \begin{center}
+		\nonstopmode
+		\input{afbeeldingen/#2.tex}
+		\errorstopmode
+		\caption{#3\label{#2}}
+        \end{center}
+    \end{figure}}
+
+% \figuurOctaveTwee[htb]{globaal label}{globale caption}
+% 	{naam1=label1}{caption1}{naam2=label2}{caption2}
+\newcommand{\figuurOctaveTwee}[7][htb]{
+\begin{figure}[#1]
+\begin{center}
+\hspace{-4cm} %hack om iets breder dan \textwidth te kunnen centreren
+\subfigure[#5]{ %sub-caption
+	\scalebox{0.9}{ %ietsje verkleinen zodat getallen niet huge
+		\nonstopmode
+		\input{afbeeldingen/#4.tex}
+		\errorstopmode
+		\label{#4}
+		\rule[-0.8cm]{0cm}{0cm} %voorkom overlap met sub-caption
+	}
+}
+%
+\rule{0.6cm}{0cm} %spacer zodat axis labels niet overlappen
+%
+\subfigure[#7]{
+	\scalebox{0.9}{ %ietsje verkleinen zodat getallen niet huge
+		\nonstopmode
+		\input{afbeeldingen/#6.tex}
+		\errorstopmode
+		\label{#6}
+		\rule[-0.8cm]{0cm}{0cm} %voorkom overlap met sub-caption
+	}
+}
+\hspace{-4cm} % centreer hack
+\caption{#3\label{#2}}
+\end{center}
+\end{figure}
+}
+
+
+
+
+
 \begin{document}
-\graphicspath{{"Afbeeldingen/"}}
+\graphicspath{{"afbeeldingen/"}}
 \maketitle
 
 
 
 
-\section{Resultaten}
+\section{De metingen}
+[proefopstelling zegt al: 5cm lengte]
+
+Zeggen: modulatie door BLOKgolf, geen gaussische!
+
+\subsection{Verloop van de piekamplituden van het golfpakket nabij de 
+resonantiefrequentie}
+Eerst werd het gedrag van de piekamplituden van het golfpakket onderzocht 
+indien de sinusoidale bursts worden afgevuurd aan een frequentie die in de 
+buurt ligt van de resonantiefrequentie. Met `de piekamplitude van het 
+golfpakket' wordt de maximale amplitude van een beschouwd golfpakket 
+bedoeld, terwijl dit interferentie ondervindt van de reflecties van vorig 
+uitgestuurde bursts. In figuur \ref{comboPakket} betekent dit de maximale 
+amplitude voor het onderste, samengestelde pakket.
+
+Het doel van deze meting is om te onderzoeken wat de vorm is van de 
+omhullende van het patroon (dat een intrinsieke snelle schommeling zal 
+kennen door het afwisselen van destructieve en constructieve interferentie) 
+en om eventueel dit patroon te parametriseren en zo met behulp van een fit 
+een zeer nauwkeurige waarde te bekomen voor de resonantiefrequentie, en dus 
+de geluidssnelheid.
+
+Praktisch werd de triggering eerst zo ingesteld dat er aan een frequentie 
+van $13.5$\,kHz een burst van van 25 sinusperioden (aan een frequentie van 
+$2.1$\,MHz) werd afgevuurd. Op de oscilloscoop was te merken dat deze 
+triggeringsfrequentie iets onder de resonantiefrequentie lag. Het 
+pulspakket (na interferentie met de gereflecteerde bursts) had immers een 
+vorm zoals het onderste pakket in figuur \ref{delayinterferenties}. De 
+`linkerstaart' was wel nog wat `zwaarder' dan in die figuur (de frequentie 
+lag verder weg van het optimum).
+
+Vervolgens werd de triggeringsfrequentie verhoogd in stappen van 5\,Hz om 
+een gedetailleerd beeld te krijgen van het verloop van deze piekamplitude 
+bij afwisselend constructieve en destructieve interferentie met de 
+weerkaatste golfpaketten.
+
+\figuurOctave[htb]{delayamp-experimenteel}{Visualisatie van de 
+piekamplituden bij veranderende burstfrequentie}
+Het resultaat hiervan is geplot in figuur \ref{delayamp-experimenteel}.  
+Merk op dat dit maal gekozen is om de meetpunten expliciet te verbinden met 
+een lijnstuk om het verloop visueel duidelijk te maken.
+
+Uit deze plot volgt inderdaad dat het gekozen frequentiegebied onder de 
+resonantiefrequentie lag, de pieken in de gemeten piekamplitude blijven 
+immers nog stijgen voor stijgende burstfrequenties.
+
+Omwille van een aantal redenen is gekozen om dit type meting niet verder te 
+zetten tot voorbij de resonantiefrequentie. Een eerste reden is puur 
+praktisch: deze meting bevat zo'n 130 meetpunten en het verkrijgen van deze 
+data via de gebrukte, manuele methode heeft een behoorlijke hoeveelheid 
+tijd in beslag genomen. Er was eenvoudigweg onvoldoende tijd om deze 
+resolutie in de bekeken burstfrequentie aan te houden tot voorbij de 
+resonantiepiek.
+
+
+Ten tweede zorgt de gebruikte gevoeligheid van de apparatuur ervoor dat 
+kleine factoren de bekomen meetwaarden danig kunnen verstoren. Een mooi 
+voorbeeld hiervan vinden we terug op de plot in het
+
+
+Ten laatste zou deze data geen meerwaarde hebben opgeleverd in vergelijking 
+met de hieronder beschreven methode die enkel de pieken in deze plot zal 
+meten.  Uit de plot blijk immers (net zoals uit de simulatie voor een 
+gaussisch gemoduleerde burst) dat het onmogelijk is om de `inwendige' 
+oscillaties van te fitten met een eenvoudige sinusfunctie. De toppen lijken 
+immers veel sterker te worden versterkt dan de dalen (te merken aan hun 
+hogere amplitude en kleinere breedte in de pieken). Een model hiervoor 
+opstellen zou ons te ver leiden.
+
+
+
+temp door traag
+
+
+onfitbaar
+
+
+
+interferentie nauwkeurig onderzocht. 
 
 
 
 \begin{table}[h!t!b!]
-\caption{XXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\caption{Relatieve piekamplituden bij de resonantiefrequenties}
 \label{lucht-tab}
 \begin{center}
 \begin{tabular}{ r | r@{}l | r@{}l  ||  r | r@{}l | r@{}l }
