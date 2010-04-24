@@ -30,14 +30,14 @@ for n=0:(trips-1)
 	pakket = factor * sin(omega*(ts+mu)) ... %or sin for boobies
 		.* reflectiecoeff^n ...
 		./ s .* exp(-(ts).^2 ./ (2 * s^2));
-	plot(ts+mu,4.5*pakket);
+	plot(1e6*(ts+mu),4.5*pakket);
 
 end
 
-axis([-15*sigma,0.00038,-1,1]);
+axis([1e6*[-15*sigma,0.00038],[-1,1]]);
 
 naam='puls-echo';
-xlab='delay (s)';
+xlab='delay ($\mu$s)';
 ylab='';
 ylabrule='0.3cm';
 width='800';

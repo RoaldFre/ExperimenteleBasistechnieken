@@ -1,3 +1,40 @@
+\newcommand{\relPiekAmp}{
+\begin{table}[h!t!b!]
+\caption{Relatieve piekamplituden bij de resonantiefrequenties}
+\label{relPiekAmp}
+\begin{center}
+\begin{tabular}{ r | r@{}l | r@{}l  ||  r | r@{}l | r@{}l }
+\multicolumn{1}{c|}{$f$ (Hz) $\pm 4$}&
+\multicolumn{2}{c|}{$A$}&
+\multicolumn{2}{c||}{$\Delta A$}&
+\multicolumn{1}{c|}{$f$ (Hz) $\pm 4$}&
+\multicolumn{2}{c|}{$A$}&
+\multicolumn{2}{c}{$\Delta A$}\\\hline
+12870&	0&.57&	0&.01&	14498&	0&.91&	0&.03\\
+12979&	0&.59&	0&.01&	14600&	0&.85&	0&.03\\
+13056&	0&.59&	0&.01&	14702&	0&.81&	0&.03\\
+13138&	0&.60&	0&.03&	14814&	0&.79&	0&.03\\
+13222&	0&.62&	0&.03&	14914&	0&.78&	0&.03\\
+13306&	0&.66&	0&.03&	15016&	0&.76&	0&.03\\
+13388&	0&.72&	0&.03&	15121&	0&.72&	0&.03\\
+13470&	0&.76&	0&.03&	15207&	0&.71&	0&.03\\
+13552&	0&.79&	0&.03&	15320&	0&.69&	0&.03\\
+13638&	0&.81&	0&.03&	15430&	0&.68&	0&.03\\
+13728&	0&.82&	0&.03&	15542&	0&.66&	0&.03\\
+13818&	0&.85&	0&.03&	15656&	0&.65&	0&.03\\
+13912&	0&.88&	0&.03&	15772&	0&.62&	0&.03\\
+14006&	0&.91&	0&.03&	15888&	0&.60&	0&.01\\
+14102&	0&.97&	0&.03&	16010&	0&.59&	0&.01\\
+14198&	1&.00&	0&.03&	16134&	0&.58&	0&.01\\
+14296&	1&.00&	0&.03&	16256&	0&.57&	0&.01\\
+14396&	0&.94&	0&.03&	16384&	0&.56&	0&.01\\
+\end{tabular}
+\end{center}
+\end{table}
+}
+
+
+
 \section{De metingen}
 [proefopstelling zegt al: 5cm lengte]
 
@@ -56,69 +93,53 @@ resonantiepiek.
 Ten tweede zorgt de gebruikte gevoeligheid van de apparatuur ervoor dat 
 kleine factoren de bekomen meetwaarden danig kunnen verstoren. Een mooi 
 voorbeeld hiervan vinden we terug op de plot in het gebied rond 13650\,Hz.  
-Er is duidelijk een uitschietend epiek merkbaar, en het vervolg van de puls 
-lijkt een beetje verschoven
+Er is duidelijk een uitschietende piek merkbaar, en het vervolg van de puls 
+lijkt een beetje verschoven. Dit is gerelateerd aan de trage meetproces.  
+Hoewel het water en de apparatuur bij het begin van de meting op 
+kamertemperatuur was, heeft er tijdens de metingen blijkbaar een kleine 
+opwarming plaatsgevonden die constant de plaats van de 
+resonantiefrequenties deed verschuiven.
+
+Deze opwarming kan eventueel puur afkomstig zijn van de aangeboden 
+kinetische energie door de sinusbursts. De meetmethode is immers zo 
+gevoelig dat even krachtig schudden met de cilinder voldoende was om de 
+2\,MHz golf een volledige periode te laten verschuiven.
+
+Dit impliceert dat de meetgegevens een onvermijdelijke bias zullen vertonen 
+indien de duur van de meting te lang is. Bovendien moet aan eenzelfde tempo 
+worden verdergewerkt om deze bias overal gelijk te houden.
 
 
-Ten laatste zou deze data geen meerwaarde hebben opgeleverd in vergelijking 
-met de hieronder beschreven methode die enkel de pieken in deze plot zal 
-meten.  Uit de plot blijk immers (net zoals uit de simulatie voor een 
-gaussisch gemoduleerde burst) dat het onmogelijk is om de `inwendige' 
-oscillaties van te fitten met een eenvoudige sinusfunctie. De toppen lijken 
-immers veel sterker te worden versterkt dan de dalen (te merken aan hun 
-hogere amplitude en kleinere breedte in de pieken). Een model hiervoor 
-opstellen zou ons te ver leiden.
-
-
-
-temp door traag
-
-
-onfitbaar
-
-
-
-interferentie nauwkeurig onderzocht. 
-
-
-
-\begin{table}[h!t!b!]
-\caption{Relatieve piekamplituden bij de resonantiefrequenties}
-\label{lucht-tab}
-\begin{center}
-\begin{tabular}{ r | r@{}l | r@{}l  ||  r | r@{}l | r@{}l }
-\multicolumn{1}{c|}{$f$ (Hz) $\pm 4$}&
-\multicolumn{2}{c|}{$A$}&
-\multicolumn{2}{c||}{$\Delta A$}&
-\multicolumn{1}{c|}{$f$ (Hz) $\pm 4$}&
-\multicolumn{2}{c|}{$A$}&
-\multicolumn{2}{c}{$\Delta A$}\\\hline
-12870&	0&.57&	0&.01&	14498&	0&.91&	0&.03\\
-12979&	0&.59&	0&.01&	14600&	0&.85&	0&.03\\
-13056&	0&.59&	0&.01&	14702&	0&.81&	0&.03\\
-13138&	0&.60&	0&.03&	14814&	0&.79&	0&.03\\
-13222&	0&.62&	0&.03&	14914&	0&.78&	0&.03\\
-13306&	0&.66&	0&.03&	15016&	0&.76&	0&.03\\
-13388&	0&.72&	0&.03&	15121&	0&.72&	0&.03\\
-13470&	0&.76&	0&.03&	15207&	0&.71&	0&.03\\
-13552&	0&.79&	0&.03&	15320&	0&.69&	0&.03\\
-13638&	0&.81&	0&.03&	15430&	0&.68&	0&.03\\
-13728&	0&.82&	0&.03&	15542&	0&.66&	0&.03\\
-13818&	0&.85&	0&.03&	15656&	0&.65&	0&.03\\
-13912&	0&.88&	0&.03&	15772&	0&.62&	0&.03\\
-14006&	0&.91&	0&.03&	15888&	0&.60&	0&.01\\
-14102&	0&.97&	0&.03&	16010&	0&.59&	0&.01\\
-14198&	1&.00&	0&.03&	16134&	0&.58&	0&.01\\
-14296&	1&.00&	0&.03&	16256&	0&.57&	0&.01\\
-14396&	0&.94&	0&.03&	16384&	0&.56&	0&.01\\
-\end{tabular}
-\end{center}
-\end{table}
+Ten laatste zou deze data aan hoge frequentieresolutie geen meerwaarde 
+hebben opgeleverd in vergelijking met de hieronder beschreven methode die 
+enkel de pieken in deze plot zal meten.  Uit de plot blijk immers (net 
+zoals uit de simulatie voor een gaussisch gemoduleerde burst) dat het 
+onmogelijk is om de `inwendige' oscillaties te fitten met een eenvoudige 
+sinusfunctie.  De toppen lijken immers ook hier veel sterker te worden 
+versterkt dan de dalen (te merken aan hun hogere amplitude en kleinere 
+breedte in de pieken). Een model hiervoor opstellen zou ons te ver leiden.
 
 
 
+\subsection{Verloop van de maxima van de piekamplituden nabij de 
+resonantiefrequentie}
+Uit de opmerkingen bij de voorgaande methode werd besloten om enkel de 
+maxima van het profiel van figuur \ref{delayamp-experimenteel} te bepalen.  
+Dit resulteert in minder meetpunten, en dus een snellere meting. Hierdoor 
+wordt de kans tot opwarming verlaagd. Bovendien is een kleine opwarming nu 
+minder dramatisch, aangezien de plaats van het locale maximum van de 
+piekamplitude van het golfpakket wel lichtjes zal wijzigen, maar het 
+globale `maximum van deze maxima' zal nog steeds op ongeveer dezelfde 
+plaats bijven.
 
+De resultaten van deze meting zijn getabuleerd in tabel \ref{relPiekAmp} en 
+grafisch weergegeven in figuur \ref{amp-experimenteel}. Omdat de ruwe 
+meetwaarde nietszeggend is, is de gemeten amplitude relatief weergegeven 
+ten opzichte van de maximaal gemeten waarde.
 
+\relPiekAmp
+\figuurOctave{amp-experimenteel}{Relatieve piekamplituden bij de 
+resonantiefrequenties}
 
 
 
