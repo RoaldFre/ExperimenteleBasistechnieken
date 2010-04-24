@@ -72,143 +72,14 @@
 \end{figure}
 }
 
-
-
-
-
 \begin{document}
 \graphicspath{{"afbeeldingen/"}}
 \maketitle
 
 
+\input{doelstellingen.tex}
+\input{voorbereiding.tex}
 
-
-\section{De metingen}
-[proefopstelling zegt al: 5cm lengte]
-
-Zeggen: modulatie door BLOKgolf, geen gaussische!
-
-\subsection{Verloop van de piekamplituden van het golfpakket nabij de 
-resonantiefrequentie}
-Eerst werd het gedrag van de piekamplituden van het golfpakket onderzocht 
-indien de sinusoidale bursts worden afgevuurd aan een frequentie die in de 
-buurt ligt van de resonantiefrequentie. Met `de piekamplitude van het 
-golfpakket' wordt de maximale amplitude van een beschouwd golfpakket 
-bedoeld, terwijl dit interferentie ondervindt van de reflecties van vorig 
-uitgestuurde bursts. In figuur \ref{comboPakket} betekent dit de maximale 
-amplitude voor het onderste, samengestelde pakket.
-
-Het doel van deze meting is om te onderzoeken wat de vorm is van de 
-omhullende van het patroon (dat een intrinsieke snelle schommeling zal 
-kennen door het afwisselen van destructieve en constructieve interferentie) 
-en om eventueel dit patroon te parametriseren en zo met behulp van een fit 
-een zeer nauwkeurige waarde te bekomen voor de resonantiefrequentie, en dus 
-de geluidssnelheid.
-
-Praktisch werd de triggering eerst zo ingesteld dat er aan een frequentie 
-van $13.5$\,kHz een burst van van 25 sinusperioden (aan een frequentie van 
-$2.1$\,MHz) werd afgevuurd. Op de oscilloscoop was te merken dat deze 
-triggeringsfrequentie iets onder de resonantiefrequentie lag. Het 
-pulspakket (na interferentie met de gereflecteerde bursts) had immers een 
-vorm zoals het onderste pakket in figuur \ref{delayinterferenties}. De 
-`linkerstaart' was wel nog wat `zwaarder' dan in die figuur (de frequentie 
-lag verder weg van het optimum).
-
-Vervolgens werd de triggeringsfrequentie verhoogd in stappen van 5\,Hz om 
-een gedetailleerd beeld te krijgen van het verloop van deze piekamplitude 
-bij afwisselend constructieve en destructieve interferentie met de 
-weerkaatste golfpaketten.
-
-\figuurOctave[htb]{delayamp-experimenteel}{Visualisatie van de 
-piekamplituden bij veranderende burstfrequentie}
-Het resultaat hiervan is geplot in figuur \ref{delayamp-experimenteel}.  
-Merk op dat dit maal gekozen is om de meetpunten expliciet te verbinden met 
-een lijnstuk om het verloop visueel duidelijk te maken.
-
-Uit deze plot volgt inderdaad dat het gekozen frequentiegebied onder de 
-resonantiefrequentie lag, de pieken in de gemeten piekamplitude blijven 
-immers nog stijgen voor stijgende burstfrequenties.
-
-Omwille van een aantal redenen is gekozen om dit type meting niet verder te 
-zetten tot voorbij de resonantiefrequentie. Een eerste reden is puur 
-praktisch: deze meting bevat zo'n 130 meetpunten en het verkrijgen van deze 
-data via de gebrukte, manuele methode heeft een behoorlijke hoeveelheid 
-tijd in beslag genomen. Er was eenvoudigweg onvoldoende tijd om deze 
-resolutie in de bekeken burstfrequentie aan te houden tot voorbij de 
-resonantiepiek.
-
-
-Ten tweede zorgt de gebruikte gevoeligheid van de apparatuur ervoor dat 
-kleine factoren de bekomen meetwaarden danig kunnen verstoren. Een mooi 
-voorbeeld hiervan vinden we terug op de plot in het
-
-
-Ten laatste zou deze data geen meerwaarde hebben opgeleverd in vergelijking 
-met de hieronder beschreven methode die enkel de pieken in deze plot zal 
-meten.  Uit de plot blijk immers (net zoals uit de simulatie voor een 
-gaussisch gemoduleerde burst) dat het onmogelijk is om de `inwendige' 
-oscillaties van te fitten met een eenvoudige sinusfunctie. De toppen lijken 
-immers veel sterker te worden versterkt dan de dalen (te merken aan hun 
-hogere amplitude en kleinere breedte in de pieken). Een model hiervoor 
-opstellen zou ons te ver leiden.
-
-
-
-temp door traag
-
-
-onfitbaar
-
-
-
-interferentie nauwkeurig onderzocht. 
-
-
-
-\begin{table}[h!t!b!]
-\caption{Relatieve piekamplituden bij de resonantiefrequenties}
-\label{lucht-tab}
-\begin{center}
-\begin{tabular}{ r | r@{}l | r@{}l  ||  r | r@{}l | r@{}l }
-\multicolumn{1}{c|}{$f$ (Hz) $\pm 4$}&
-\multicolumn{2}{c|}{$A$}&
-\multicolumn{2}{c||}{$\Delta A$}&
-\multicolumn{1}{c|}{$f$ (Hz) $\pm 4$}&
-\multicolumn{2}{c|}{$A$}&
-\multicolumn{2}{c}{$\Delta A$}\\\hline
-12870&	0&.57&	0&.01&	14498&	0&.91&	0&.03\\
-12979&	0&.59&	0&.01&	14600&	0&.85&	0&.03\\
-13056&	0&.59&	0&.01&	14702&	0&.81&	0&.03\\
-13138&	0&.60&	0&.03&	14814&	0&.79&	0&.03\\
-13222&	0&.62&	0&.03&	14914&	0&.78&	0&.03\\
-13306&	0&.66&	0&.03&	15016&	0&.76&	0&.03\\
-13388&	0&.72&	0&.03&	15121&	0&.72&	0&.03\\
-13470&	0&.76&	0&.03&	15207&	0&.71&	0&.03\\
-13552&	0&.79&	0&.03&	15320&	0&.69&	0&.03\\
-13638&	0&.81&	0&.03&	15430&	0&.68&	0&.03\\
-13728&	0&.82&	0&.03&	15542&	0&.66&	0&.03\\
-13818&	0&.85&	0&.03&	15656&	0&.65&	0&.03\\
-13912&	0&.88&	0&.03&	15772&	0&.62&	0&.03\\
-14006&	0&.91&	0&.03&	15888&	0&.60&	0&.01\\
-14102&	0&.97&	0&.03&	16010&	0&.59&	0&.01\\
-14198&	1&.00&	0&.03&	16134&	0&.58&	0&.01\\
-14296&	1&.00&	0&.03&	16256&	0&.57&	0&.01\\
-14396&	0&.94&	0&.03&	16384&	0&.56&	0&.01\\
-\end{tabular}
-\end{center}
-\end{table}
-
-
-
-
-
-
-
-
-
-
-
-
-
+\input{metingen.tex}
 
 \end{document}
