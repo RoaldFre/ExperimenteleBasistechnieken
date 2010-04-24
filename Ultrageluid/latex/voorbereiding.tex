@@ -1,13 +1,16 @@
 \subsection{Model}
 
-In vervormbare materialen is er voor kleine uitwijkingen een lineair verband 
-tussen de drukgradi\"ent en het oorspronkelijke volume van het materiaal. De 
-verhoudingsconstante is de bulk- of Young-modulus en is eigen aan elk 
-materiaal.
+In vervormbare materialen is er voor kleine vervormingen een lineair verband 
+tussen de relatieve volumeverandering en de druk nodig voor deze 
+volumeverandering. De verhoudingsconstante is de bulkmodulus en is eigen aan 
+elk materiaal.
 \begin{equation}
 \label{bulkmod}
-B = - V \frac{\partial p}{\partial V}
+B = -\frac{\Delta P}{\frac{\Delta V}{V}} = - V \frac{\partial P}{\partial V}
 \end{equation}
+
+\figuur{width=0.4\textwidth}{bulk}{Bulk modulus}
+
 
 \subsection{Puls-echo methode}
 De meest voor de hand liggende manier om de geluidssnelheid te bepalen is meten 
@@ -51,7 +54,7 @@ wordt uitgestuurd.
 \label{resfreq}
 f_n = \frac{1}{T_n} = \frac{1}{n} \frac{v}{2L}
 \end{equation}
-In het ideale geval zou elke puls uit slechts \"e\"en cyclus van de draaggolf 
+In het ideale geval zou elke puls uit slechts \'e\'en cyclus van de draaggolf 
 hoeven bestaan. Men zou dan die puls enkel moeten laten overeenkomen met zijn 
 reflecties om resonantie waar te nemen. Vanwege praktische redenen is dit 
 echter niet mogelijk.
