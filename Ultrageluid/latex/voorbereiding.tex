@@ -11,6 +11,28 @@ B = -\frac{\Delta P}{\frac{\Delta V}{V}} = - V \frac{\partial P}{\partial V}
 
 \figuur{width=0.4\textwidth}{bulk}{Bulk modulus}
 
+In dit model wordt er een cylinderkolom van een vloeistof beschouwd. De 
+uitwijkingen zijn enkel volgens de $x$-co\"ordinaat. Een cylinder van lengte 
+$\Delta x$ en oppervlakte $A$ heeft als volume $A \Delta x$.
+
+\begin{equation}
+\label{bulkmod1d}
+B = -A \Delta x \frac{\partial P}{\partial( A x)} = -\Delta x \frac{\partial 
+P}{\partial x}
+\end{equation}
+
+De uitwijking van de vloeistofdeeltjes oorspronkelijk op co\"ordinaat $x$ en op 
+het tijdstip $t$ wordt voorgesteld door $u(x,t)$. De wet van Newton voor een 
+infinitesimale cylinder wordt dan
+\begin{align*}
+F &= ma \\
+P(x)A - P(x+dx)A &= \rho A dx \frac{ \partial^2 u}{\partial t^2} \\
+\frac{\partial P}{\partial x} + \rho \frac{ \partial^2 u}{\partial t^2} &= 0
+
+\end{align*}
+
+
+
 
 \subsection{Puls-echo methode}
 De meest voor de hand liggende manier om de geluidssnelheid te bepalen is meten 
@@ -24,17 +46,14 @@ In de resonantiekamer kan een enkele puls enkele keren heen en weer blijven
 reflecteren. Telkens reflecteert een vaste fractie van de amplitude, de 
 reflectieco"effici"ent. Ook worden de golfpakketjes verstrooid door dispersieve 
 effecten. Een typische waarneming werd gesimuleerd en weergegeven in figuur 
-\ref{pulsecho}.  Een voordeel van het gebruiken van een resonantiekamer is dat
+\ref{puls-echo}.  Een voordeel van het gebruiken van een resonantiekamer is dat
 men meerdere waarnemingen in \'e\'en keer kan doen.
 
-%%%% ROALD? %%%%%%%%%%%
-%% Figuur van de uitstervende echos
-%%%%%%%%%%%%%%%%%%%%
+\figuurOctave{puls-echo}{Gereflecteerde echo's met een reflectieco"effici\"ent 
+van 0.7}
 
-Deze methode heeft slechts een beperkte nauwkeurigheid.  De geluidsbron en de 
-ontvanger moeten zeer goed gesynchroniseerd worden. Door de afstand te 
-vergroten heeft het geluid meer tijd nodig, maar het wordt dan moeilijker om 
-alle omstandigheden te controleren. 
+Deze methode heeft slechts een beperkte nauwkeurigheid. Door dispersie 
+verstrooien de pulsen waardoor ze moeilijker te localiseren zijn.
 
 \subsection{Staande golf methode}
 
@@ -78,5 +97,6 @@ een arbeidscyclus (dutycycle) van 10 \`a 20\,\%.
 %%%% KASPER
 %%% AFWERKEN
 %%% Figuur van amplitudeverloop
+%%%%%%
 
 
