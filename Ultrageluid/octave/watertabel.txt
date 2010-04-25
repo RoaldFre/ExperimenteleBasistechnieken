@@ -1,0 +1,9 @@
+# Created by Octave 3.2.4, Sat Apr 24 20:27:08 2010 CEST <roald@Compal>
+# name: tabel
+# type: matrix
+# rows: 4
+# columns: 3
+ 6 1.4 0.03
+ 9 1.41 0.02
+ 11 1.43 0.02
+ 13 1.43 0.02
