@@ -1,17 +1,18 @@
 \section{Voorbereiding}
 \subsection{Model}
 
-In vervormbare materialen is er voor kleine vervormingen een lineair verband 
-tussen de relatieve volumeverandering en de druk nodig voor deze 
-volumeverandering. Voor een illustratie, zie figuur (\ref{bulk}). De 
-verhoudingsconstante is de bulkmodulus en is eigen aan elk materiaal.
+In vervormbare materialen is er voor kleine vervormingen een lineair 
+verband tussen de relatieve volumeverandering $\Delta V/V$ en de 
+drukverandering $\Delta P$ nodig voor deze volumeverandering. Voor een 
+illustratie, zie figuur (\ref{bulk}).  De verhoudingsconstante is de 
+bulkmodulus $B$ en is eigen aan elk materiaal.
 \begin{equation}
 \label{bulkmod}
 B = -\frac{\Delta P}{\frac{\Delta V}{V}} = - V \frac{\Delta P}{\Delta V}
 \end{equation}
 \figuur{width=0.7\textwidth}{bulk}{Illustratie van de bulk modulus}
 
-In dit model wordt er een cylinderkolom van een vloeistof beschouwd. De 
+In dit model wordt er een cilinderkolom van een vloeistof beschouwd. De 
 uitwijkingen zijn enkel volgens de $x$-co\"ordinaat. De uitwijking van de 
 vloeistofdeeltjes oorspronkelijk op co\"ordinaat $x$ en op het tijdstip $t$ 
 wordt voorgesteld door $u(x,t)$. Een infinitesimale cylinder van lengte $dx$ en 
@@ -50,16 +51,16 @@ Na herschrijven wordt dit
 \partpart{u}{x} - \frac{\rho}{B} \partpart{u}{t} = 0
 \end{equation}
 
-Dit is de in de natuurkunde alomtegenwoordige golfvergelijking. De snelheid van 
-een golf is eenvoudigweg
+Dit is de in de natuurkunde alomtegenwoordige golfvergelijking. De snelheid 
+van een golf is dan eenvoudigweg
 \begin{equation}
 \label{speedofsound}
 v = \sqrt{\frac{B}{\rho}}
 \end{equation}
 
 De waardes voor de dichtheid en de bulkmodulus kunnen worden opgezocht. Zo kan 
-men voor een materiaal de geluidssnelheid berekenen. De resultaten voor enkele 
-materialen staan in tabel \ref{speedtable}. 
+men voor een materiaal de geluidssnelheid berekenen. De resultaten voor 
+enkele materialen staan weergegeven in tabel \ref{speedtable}. 
 
 \begin{table}[htb]
 \caption{Berekende geluidsnelheid}
@@ -79,8 +80,8 @@ staal	& $1.60 \cdot 10^{11}$	& 7900 & 4500 \\
 \subsection{Puls-echo methode}
 De meest voor de hand liggende manier om de geluidssnelheid te bepalen is meten 
 hoe lang het geluid erover doet om een bepaalde afstand te overbruggen. Als de 
-tijd van het uitzenden tot het ontvangen van puls $\Delta t$ is en de afstand 
-ertussen $L$ is, is de snelheid eenvoudigweg
+tijd van het uitzenden tot het ontvangen van puls $\Delta t$ is en de 
+afstand ertussen $L$, dan is de snelheid eenvoudigweg
 $$
 v = \frac{L}{\Delta t}
 $$
@@ -95,23 +96,26 @@ in figuur \ref{puls-echo}.
 van 0.7}
 
 Een voordeel van het gebruiken van een resonantiekamer is dat
-men meerdere waarnemingen in \'e\'en keer kan doen.
-Deze methode heeft slechts een beperkte nauwkeurigheid. Door dispersie 
-verstrooien de pulsen waardoor ze moeilijker te localiseren zijn.
+men meerdere waarnemingen in \'e\'en keer kan doen, namelijk voor een 
+verschillend aantal reflecties.
+Deze methode heeft echter slechts een beperkte nauwkeurigheid. Door 
+dispersie verstrooien de pulsen waardoor ze immers moeilijker te 
+localiseren zijn.
 
 \subsection{Resonantie methode}
 
 In een resonantiekamer kan men een verfijndere methode gebruiken. Er worden 
 geluidsgolven uitgestuurd van een zeer hoge frequentie, in de orde van enkele 
-megahertz. Deze draaggolf wordt gemoduleerd door een blokgolf tot pulsen met 
-een frequentie die rond de resonantiefrequentie zit. De uitgezonden puls 
-reflecteert heen en weer in de kamer en verliest zijn energie maar dit keer 
-worden er ook nieuwe pulsen uitgestuurd. Afhankelijk van wanneer de pulsen 
-uitgestuurd worden, interfereren ze constructief of destructief met elkaar. De 
-sterkste constructieve interferentie doet zich voor wanneer de frequentie van 
-de uitgezonden pulsen \'e\'en van de resonantiefrequenties zijn. Dit valt voor 
-wanneer een puls een geheel aantal keer de lengte van de resonantiekamer heeft 
-afgelegd en is teruggekeerd voor een nieuwe puls wordt uitgestuurd.
+megahertz. Deze draaggolf wordt gemoduleerd door een blokgolf tot pulsen 
+met een frequentie die rond de resonantiefrequentie van de resonantiekamer 
+zit.  De uitgezonden puls reflecteert heen en weer in de kamer en verliest 
+zijn energie, maar dit maal worden er ook nieuwe pulsen uitgestuurd.  
+Afhankelijk van wanneer de pulsen uitgestuurd worden, interfereren ze 
+constructief of destructief met elkaar. De sterkste constructieve 
+interferentie doet zich voor wanneer de frequentie van de uitgezonden 
+pulsen \'e\'en van de resonantiefrequenties zijn. Dit gebeurt wanneer een 
+puls een geheel aantal keer de lengte van de resonantiekamer heeft afgelegd 
+en is teruggekeerd voor een nieuwe puls wordt uitgestuurd.
 \begin{equation}
 \label{resfreq}
 f_n = \frac{1}{T_n} = \frac{1}{n} \frac{v}{2L}
@@ -127,16 +131,16 @@ snelheid berekenen
 v = 2nLf_n = 2L \freso
 \end{equation}
 In het ideale geval zou elke puls uit slechts \'e\'en cyclus van de draaggolf 
-hoeven bestaan. Men zou dan die puls enkel moeten laten overeenkomen met zijn 
-reflecties om resonantie waar te nemen. Vanwege praktische redenen is dit 
-echter niet mogelijk.
+hoeven bestaan. Men zou dan die puls enkel moeten laten overeenkomen met 
+zijn reflecties om resonantie waar te nemen.
 
-Een puls wordt gedempt door een reflectie. Om de interferentie te kunnen 
-waarnemen, zijn we dus aangewezen een grotere hoeveelheid energie uit te zenden 
-met elke puls. Ook blijft het geen mooi geheel. Door dispersie wordt de puls 
-verstrooid wat de waarnemingen bemoeilijkt. Een impressie van een disperserende 
-puls wordt weergegeven in figuur \ref{dispersie}. Bredere pulsen hebben hier 
-minder last van.
+Vanwege praktische redenen is dit echter niet mogelijk. Een puls wordt 
+gedempt door een reflectie. Om de interferentie te kunnen waarnemen, zijn 
+we dus aangewezen een grotere hoeveelheid energie uit te zenden met elke 
+puls. Ook blijft de puls geen mooi geheel. Door dispersie wordt deze immers 
+verstrooid, wat de waarnemingen bemoeilijkt. Een impressie van een 
+disperserende puls wordt weergegeven in figuur \ref{dispersie}. Bredere 
+pulsen hebben hier relatief minder last van.
 
 \figuurOctave{dispersie}{Impressie van een disperserende puls}
 
