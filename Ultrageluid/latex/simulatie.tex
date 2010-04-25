@@ -6,19 +6,20 @@ De simulatie werd opgezet met waarden voor de parameters die overeenkomen
 met de experimentele waarden in de volgende sectie.
 
 Voor de eenvoud werd wel gekozen om de sinusburst te moduleren door een 
-herhaalde gaugssische, en niet door een blokgolf. Dit laat toe om 
+herhaalde gaussische, en niet door een blokgolf. Dit laat toe om 
 dispersieverschijnselen eenvoudiger te simuleren. Concreet werd de 
 dispersie ge\"implementeerd door de standaarddeviatie van de omhullende 
 gaussische met een constante snelheid in de tijd te laten verbreden. Een 
 impressie van de complexere dispersieverschijnselen die we opmerkten bij 
-een blokvormige modulatie is geschetst in figuur \ref{dispersie}.
+een blokvormige modulatie (zoals gebruikt in het experiment) is geschetst 
+in figuur \ref{dispersie}.
 
 Per reflectie wordt de breedte van de gaussische zo met een constante 
 waarde verhoogd. Bovendien wordt de hoogte van een puls per `trip` (dus per 
 twee reflecties) verlaagd door te vermenigvuldigen met een 
 reflectieco\"effici\"ent. In de simulatie werd hiervoor een waarde van 
 $0.7$ gekozen, dit komt ruwweg overeen met de experimenteel geobserveerde 
-waarde.
+waarde voor water.
 
 Hoe \'e\'en zulke puls evolueert wanneer ze heen en weer wordt 
 gereflecteerd in de resonantiekamer (en telkens wordt opgevangen door de 
@@ -27,10 +28,10 @@ duidelijkheid van de grafiek de frequentie van de snelle sinusgolf hier
 vier maal lager is dan de werkelijk gebruikte frequentie in het experiment.
 
 Een compleet golfpakket met interferentie van haar reflecties wordt dan 
-opgbouwd door een burst op te tellen met haar reflecties (met grotere 
+opgebouwd door een burst op te tellen met haar reflecties (met grotere 
 breedte en lagere hoogte) die werden verschoven over een kleine 
 delayperiode afhankelijk van het verschil tussen de repetitiefrequentie van 
-de bursts en de resonantiefrequentie. De opbouw van zo'n pakket word 
+de bursts en de resonantiefrequentie. De opbouw van zo'n pakket wordt 
 weergegeven in figuur \ref{comboPakket}. Onderaan staat het `eindpakket' 
 dat bekomen is door optellen van de bovenstaande gereflecteerde bursts (in 
 het vervolg van de simulatie zal steeds gewerkt worden met een som van 20 
@@ -45,8 +46,8 @@ In wat volgt zal met `delay' steeds het tijdsverschil bedoeld tussen het
 moment waarop een \'e\'en maal gereflecteerde puls aankomt bij een nieuw 
 uitgezonde puls ten opzichte van het tijdsverschil voor ditzelfde traject 
 voor dezelfde pulsen indien de burstrepetitie zo gekozen is dat deze twee 
-pulsen perfect constructief interfereren (bovenstaand besproken figuur zou 
-dit duidelijk moeten maken).
+pulsen perfect constructief interfereren (bovenstaand besproken figuur 
+\ref{comboPakket} zou dit duidelijk moeten maken).
 
 Door nu deze delay te laten vari\"eren rond nul wordt gesimuleerd wat er 
 gebeurt indien de burstrepetitiefrequentie vari\"eert rond de 
