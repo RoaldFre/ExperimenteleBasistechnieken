@@ -9,7 +9,9 @@ Voor de eenvoud werd wel gekozen om de sinusburst te moduleren door een
 herhaalde gaugssische, en niet door een blokgolf. Dit laat toe om 
 dispersieverschijnselen eenvoudiger te simuleren. Concreet werd de 
 dispersie ge\"implementeerd door de standaarddeviatie van de omhullende 
-gaussische met een constante snelheid in de tijd te laten verbreden.
+gaussische met een constante snelheid in de tijd te laten verbreden. Een 
+impressie van de complexere dispersieverschijnselen die we opmerkten bij 
+een blokvormige modulatie is geschetst in figuur \ref{dispersie}.
 
 Per reflectie wordt de breedte van de gaussische zo met een constante 
 waarde verhoogd. Bovendien wordt de hoogte van een puls per `trip` (dus per 
@@ -17,6 +19,12 @@ twee reflecties) verlaagd door te vermenigvuldigen met een
 reflectieco\"effici\"ent. In de simulatie werd hiervoor een waarde van 
 $0.7$ gekozen, dit komt ruwweg overeen met de experimenteel geobserveerde 
 waarde.
+
+Hoe \'e\'en zulke puls evolueert wanneer ze heen en weer wordt 
+gereflecteerd in de resonantiekamer (en telkens wordt opgevangen door de 
+sensor) werd weergegeven in figuur \ref{puls-echo}. Merk op dat voor de 
+duidelijkheid van de grafiek de frequentie van de snelle sinusgolf hier 
+vier maal lager is dan de werkelijk gebruikte frequentie in het experiment.
 
 Een compleet golfpakket met interferentie van haar reflecties wordt dan 
 opgbouwd door een burst op te tellen met haar reflecties (met grotere 
@@ -50,14 +58,18 @@ twee pieken naast de centrale piek van figuur \ref{delayamp}. De paketten
 ertussen bevinden zich in het gebied met overheersend destructieve 
 interferentie.
 
-Uit de maxima van de amplituden van de golfpaketten uit figuur 
-\ref{delayinterferenties} is dan ook figuur \ref{delayamp} kunnen 
-gesimuleerd worden. Deze maximale piekamplituden werden in deze laatste 
-figuur geplot in functie van de delaytijd voor 1 `trip' van een burst.
-
 \figuurOctave{delayinterferenties}{Gedrag van het uiteindelijke golfpakket 
 bij variatie van de delay of burstrepetitiefrequentie}
 
+Uit de maxima van de amplituden van de golfpaketten uit figuur 
+\ref{delayinterferenties} is dan ook figuur \ref{delayamp} kunnen 
+gesimuleerd worden. De grootte van deze maximale `piekamplituden' werden in 
+deze laatste figuur geplot in functie van de delaytijd voor 1 `trip' van 
+een burst.
 
+Deze laatste figuur \ref{delayamp} is wat we willen bereiken met de 
+metingen. Uit de locatie van de centrale piek kan eenvoudig de 
+resonantiefrequentie worden afgelezen waaruit dan meteen de geluidssnelheid 
+volgt.
 
 
