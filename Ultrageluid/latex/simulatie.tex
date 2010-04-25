@@ -1,12 +1,65 @@
 \section{Numerieke simulatie}
 Als extra voorbereiding werd een numerieke simulatie uitgevoerd. Alle 
-bovenstaande afbeeldingen zijn hier resultaten van.
+bovenstaande plots zijn hier resultaten van.
 
 De simulatie werd opgezet met waarden voor de parameters die overeenkomen 
 met de experimentele waarden in de volgende sectie.
 
 Voor de eenvoud werd wel gekozen om de sinusburst te moduleren door een 
 herhaalde gaugssische, en niet door een blokgolf. Dit laat toe om 
-dispersieverschijnselen eenvoudiger ge simuleren.
+dispersieverschijnselen eenvoudiger te simuleren. Concreet werd de 
+dispersie ge\"implementeerd door de standaarddeviatie van de omhullende 
+gaussische met een constante snelheid in de tijd te laten verbreden.
 
-Concreet werd de simulatie als volgt
+Per reflectie wordt de breedte van de gaussische zo met een constante 
+waarde verhoogd. Bovendien wordt de hoogte van een puls per `trip` (dus per 
+twee reflecties) verlaagd door te vermenigvuldigen met een 
+reflectieco\"effici\"ent. In de simulatie werd hiervoor een waarde van 
+$0.7$ gekozen, dit komt ruwweg overeen met de experimenteel geobserveerde 
+waarde.
+
+Een compleet golfpakket met interferentie van haar reflecties wordt dan 
+opgbouwd door een burst op te tellen met haar reflecties (met grotere 
+breedte en lagere hoogte) die werden verschoven over een kleine 
+delayperiode afhankelijk van het verschil tussen de repetitiefrequentie van 
+de bursts en de resonantiefrequentie. De opbouw van zo'n pakket word 
+weergegeven in figuur \ref{comboPakket}. Onderaan staat het `eindpakket' 
+dat bekomen is door optellen van de bovenstaande gereflecteerde bursts (in 
+het vervolg van de simulatie zal steeds gewerkt worden met een som van 20 
+reflecties). De afname in amplituden ten gevolge van de 
+reflectieco\"effici\"ent en de verbreding van de puls ten gevolge van 
+dispersie zijn duidelijk merkbaar per reflectie.
+
+\figuurOctave{comboPakket}{Samenstellen van een golfpakket door 
+interferentie tussen de uitgezonde puls en haar reflecties}
+
+In wat volgt zal met `delay' steeds het tijdsverschil bedoeld tussen het 
+moment waarop een \'e\'en maal gereflecteerde puls aankomt bij een nieuw 
+uitgezonde puls ten opzichte van het tijdsverschil voor ditzelfde traject 
+voor dezelfde pulsen indien de burstrepetitie zo gekozen is dat deze twee 
+pulsen perfect constructief interfereren (bovenstaand besproken figuur zou 
+dit duidelijk moeten maken).
+
+Door nu deze delay te laten vari\"eren rond nul wordt gesimuleerd wat er 
+gebeurt indien de burstrepetitiefrequentie vari\"eert rond de 
+resonantiefrequentie. In figuur \ref{delayinterferenties} wordt getoond hoe 
+het uiteindelijke golfpakket zich dan gedraagt. Wat we zien in het midden 
+(met de $y$-index 0) is de resonantiefrequentie (de centrale piek op figuur 
+\ref{delayamp}), de twee grote pakketten op $y$-index $-4$ en $4$ zijn de 
+twee pieken naast de centrale piek van figuur \ref{delayamp}. De paketten 
+ertussen bevinden zich in het gebied met overheersend destructieve 
+interferentie.
+
+Uit de maxima van de amplituden van de golfpaketten uit figuur 
+\ref{delayinterferenties} is dan ook figuur \ref{delayamp} kunnen 
+gesimuleerd worden. Deze maximale piekamplituden werden in deze laatste 
+figuur geplot in functie van de delaytijd voor 1 `trip' van een burst.
+
+
+
+\figuurOctave{delayinterferenties}{Gedrag van het uiteindelijke golfpakket 
+bij variatie van de delay of burstrepetitiefrequentie}
+
+
+
+

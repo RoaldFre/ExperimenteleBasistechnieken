@@ -25,17 +25,17 @@ for n=0:(trips-1)
 		./ s .* exp(-(ts - mu).^2 ./ (2 * s^2));
 	ys = ys + pakket;
 
-	plot(ts,2.5*pakket + n + 1);
+	plot(1e6*ts,2.5*pakket + n + 1);
 
 end
 
-plot(ts,1.5*ys - 0.5);
-axis([-2e-5,1.0e-5,-1.5,6.5]);
+plot(1e6*ts,1.5*ys - 0.5);
+axis([1e6*[-2e-5,1.0e-5],[-1.5,6.5]]);
 set (gca, 'ytick',[-0.5,1,2,3,4,5,6]);
 set (gca, 'yticklabel',{'totaal','1','2','3','4','5','6'});
 
 naam='comboPakket';
-xlab='delay (s)';
+xlab='delay ($\mu$s)';
 ylab='';
 ylabrule='0.3cm';
 width='700';
@@ -90,16 +90,16 @@ for di=1:delaynum
 		ys = ys + pakket;
 	end
 
-	plot(ts,2.5*ys + di - (delaynum+1)/2);
+	plot(1e6*ts,2.5*ys + di - (delaynum+1)/2);
 
 	amps(di) = max(abs(ys));
 end
 
-axis([-1.0e-5,1.0e-5,-5.5,5.5]);
+axis([-10,10,-5.5,5.5]);
 
 set (gca, 'ytick',-5:5);
 naam='delayinterferenties';
-xlab='delay (s)';
+xlab='delay ($\mu$s)';
 ylab='';
 ylabrule='0.3cm';
 width='700';
@@ -152,12 +152,12 @@ for di=1:delaynum
 	amps(di) = max(abs(ys));
 end
 
-plot(delays,amps/max(amps));
+plot(1e6*delays,amps/max(amps));
 
-axis([-4e-6,4.0e-6,0.0,1]);
+axis([-4,4,0.0,1]);
 
 naam='delayamp';
-xlab='delay (s)';
+xlab='$\Delta$delay/trip ($\mu$s)';
 ylab='relatieve amplitude';
 ylabrule='0.3cm';
 width='700';

@@ -37,7 +37,7 @@ end
 axis([1e6*[-15*sigma,0.00038],[-1,1]]);
 
 naam='puls-echo';
-xlab='delay ($\mu$s)';
+xlab='t ($\mu$s)';
 ylab='';
 ylabrule='0.3cm';
 width='800';
