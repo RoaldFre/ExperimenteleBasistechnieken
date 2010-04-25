@@ -20,3 +20,25 @@ tabel = [water(:,1), roundsd(snelheid/1000,3), roundsd(dsnelheid/1000,1)]
 save "watertabel.txt" tabel
 
 
+
+
+glycerine = ...
+[1,	5.4*50e-6,	0.5*50e-6]
+
+snelheidg = glycerine(:,1) .* lengte ./ glycerine(:,2);
+dsnelheidg = glycerine(:,3) ./ glycerine(:,2) .* snelheidg;
+
+tabelg = [glycerine(:,1), roundsd(snelheidg/1000,3), roundsd(dsnelheidg/1000,1)]
+
+save "glycerinetabel.txt" tabelg
+
+
+A1 = 5.6*20;
+dA1 = 0.2*20;
+A2 = 0.4*5;
+dA2 = 0.2*5;
+
+reflectiecoeff = A2 / A1;
+dreflectiecoeff = reflectiecoeff * sqrt((dA1/A1)^2 + (dA2/A2)^2);
+
+
