@@ -1,0 +1,89 @@
+\section{Voorbereiding}
+
+\subsection{Helmholtz spoel}
+
+Een Helmholtz spoel is een apparaat dat gebruikt wordt om zeer uniforme 
+magnetische velden aan te leggen. Het is opgebouwd uit twee spoelen met straal 
+$R$ en $N$ windingen. Ze bevinden zich op een afstand $R$ van elkaar,
+hetzelfde als de straal. Door beide spoelen stroomt dezelfde stroom $I$. De 
+opstelling staat afgebeeld in figuur \ref{helmholtz}.
+
+%\figuur{width=0.4\textwidth}{helmholtz}{Schematische weergave van een 
+%Helmholtz spoel}
+
+Het veld van de opstelling is de som van de velden van twee aparte spoelen. Het 
+veld van \'e\'en enkele spoel op de centrale as kan berekend worden met de wet 
+van Biot-Savart.
+$$
+\vec{B} = \frac{\mu_0 I}{4 \pi} \int \frac{\vec{dl} \times \hat{r}}{r^2}
+$$
+Vanuit symmetrieoverwegingen kan het $B$-veld enkel volgens de $x$-as zijn. Het 
+veld op een afstand $h$ van het centrum wordt dus
+$$
+B_x = \frac{\mu_0 I}{4 \pi} \frac{2 \pi R}{r} \frac{R}{r}
+$$
+Hier wordt de uitdrukking voor $r$, de afstand tot een elementje van de spoel, 
+ingevuld en de vergelijking wordt vereenvoudigd
+$$
+B = \frac{\mu_0 I R^2}{2(R^2+x^2)^{3/2}}
+$$
+Het veld in de Helmholtz spoel kan nu berekend door het veld van twee spoelen 
+op te tellen. Omdat we het veld in het midden van het apparaat nodig hebben, 
+stellen we $x$ gelijk aan $R/2$
+$$
+B = 2 \frac{\mu_0 I R^2}{{2(R^2+(R/2)^2})^{3/2}}
+$$
+Na vereenvoudiging bekomt men
+$$
+B = \left(\frac{4}{5}\right)^{3/2} 
+$$
+
+\subsection{Baan van een elektron in een uniform magnetisch veld}
+
+De beginsnelheid van het elektron kan bepaald worden door de wet van behoud van 
+energie.  De elektronen worden vanuit rust versneld door het aangelegde 
+spanningsverschil.  De kinetische energie kan dus beschreven worden door
+$$
+\frac{mv^2}{2} = eV
+$$
+Oplossen naar de snelheid geeft
+$$
+v = \sqrt{ \frac{e}{m} 2V }
+$$
+De kracht op een bewegende lading $q$ in een elektromagnetisch veld wordt 
+gegeven door de Lorentz-kracht
+$$
+\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
+$$
+In deze proef is enkel een magnetisch veld aanwezig. De lading van het elektron 
+wordt voorgesteld door $e$. Tenslotte worden de elektronen loodrecht op de 
+magnetische veldlijnen ge\"injecteerd. De uitdrukking voor de kracht wordt dan
+$$
+F = e v B
+$$
+Deze kracht staat altijd loodrecht op zowel de snelheid van het deeltje als het 
+magnetisch veld. Omdat de kracht altijd loodrecht op de snelheid staat, blijft 
+de grootte van de snelheid constant en de grootte van de kracht dus ook. De 
+elektronen voeren een cirkelbeweging uit. In een cirkelbaan is de centrifugale 
+kracht even groot als de centripetale kracht, in dit geval de magnetische 
+kracht.
+$$
+\frac{mv^2}{r} = evB
+$$
+Waarbij $r$ de straal is van de cirkelbaan.
+Daar de snelheid van de elektronen altijd onder 10\,\% van de lichtsnelheid 
+blijft, mogen relativistische effecten verwaarloosd worden. Deze vergelijking 
+wordt opgelost naar de soortelijke lading $e/m$
+$$
+\frac{e}{m} = \frac{v}{Br}
+$$
+Hier kan de uitdrukking voor snelheid rechtsreeks ingevuld worden omdat de 
+snelheid constant blijft.
+$$
+\frac{e}{m} = \sqrt{\frac{e}{m} \frac{2V}{B^2r^2}}
+$$
+Hieruit volgt de uitdrukking voor de soortelijke lading.
+$$
+\frac{e}{m} = \frac{2V}{B^2r^2}
+$$
+
