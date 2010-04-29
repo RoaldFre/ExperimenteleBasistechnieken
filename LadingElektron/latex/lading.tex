@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[dutch]{babel}
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
+\usepackage{wasysym}
+
+\usepackage{a4wide}
+
+\author{Roald Frederickx\\Kasper Meerts}
+\title{De soortelijke lading van het elektron}
+\date{26 april 2010}
+
+\renewcommand{\baselinestretch}{1.17}
+
+\newcommand{\partieel}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\partpart}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\grad}{^\circ}
+
+\newcommand{\freso}{f_\mathrm{reso}}
+
+\newcommand{\figuur}[4][htb]{
+    \begin{figure}[#1]
+        \begin{center}
+	    \includegraphics[#2]{#3}\\
+	    %\parbox{#2}{\caption{#4\label{#3}}}
+	    %voor: \includegraphics[width=#2]{#3}\\
+	    \caption{#4\label{#3}}
+        \end{center}
+    \end{figure}}
+%\figuur[htb]{width=breedte+eenheid}{naam=label}{caption}
+
+
+% \figuurOctave[htb]{naam=label}{caption}
+\newcommand{\figuurOctave}[3][htb]{
+    \begin{figure}[#1]
+        \begin{center}
+		\nonstopmode
+		\input{afbeeldingen/#2.tex}
+		\errorstopmode
+		\caption{#3\label{#2}}
+        \end{center}
+    \end{figure}}
+
+% \figuurOctaveTwee[htb]{globaal label}{globale caption}
+% 	{naam1=label1}{caption1}{naam2=label2}{caption2}
+\newcommand{\figuurOctaveTwee}[7][htb]{
+\begin{figure}[#1]
+\begin{center}
+\hspace{-4cm} %hack om iets breder dan \textwidth te kunnen centreren
+\subfigure[#5]{ %sub-caption
+	\scalebox{0.9}{ %ietsje verkleinen zodat getallen niet huge
+		\nonstopmode
+		\input{afbeeldingen/#4.tex}
+		\errorstopmode
+		\label{#4}
+		\rule[-0.8cm]{0cm}{0cm} %voorkom overlap met sub-caption
+	}
+}
+%
+\rule{0.6cm}{0cm} %spacer zodat axis labels niet overlappen
+%
+\subfigure[#7]{
+	\scalebox{0.9}{ %ietsje verkleinen zodat getallen niet huge
+		\nonstopmode
+		\input{afbeeldingen/#6.tex}
+		\errorstopmode
+		\label{#6}
+		\rule[-0.8cm]{0cm}{0cm} %voorkom overlap met sub-caption
+	}
+}
+\hspace{-4cm} % centreer hack
+\caption{#3\label{#2}}
+\end{center}
+\end{figure}
+}
+
+\begin{document}
+\graphicspath{{"./afbeeldingen/"}}
+\maketitle
+
+
+\input{doelstellingen.tex}
+\input{voorbereiding.tex}
+\input{simulatie.tex}
+\input{proefopstelling.tex}
+\input{metingen.tex}
+\input{besluit.tex}
+
+\end{document}
