@@ -1,7 +1,5 @@
 TARGET=lading
-all:	afb
+all:
 	pdflatex ${TARGET}.tex
 	rm ${TARGET}.log
 
-afb:
-	cd afbeeldingen; ln -sf ../../octave/afbeeldingen/*  .

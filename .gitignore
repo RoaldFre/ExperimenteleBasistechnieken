@@ -1,4 +1,6 @@
-*.pdf
+ultra.pdf
+lading.pdf
 .*.swp
 *.aux
+*.log
 octave-core
