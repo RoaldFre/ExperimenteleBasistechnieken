@@ -1,5 +1,4 @@
 \section{Voorbereiding}
-
 \subsection{Helmholtz spoel}
 
 Een Helmholtz spoel is een apparaat dat gebruikt wordt om zeer uniforme 
@@ -18,20 +17,27 @@ $$
 \vec{B} = \frac{\mu_0 I}{4 \pi} \int \frac{\vec{dl} \times \hat{r}}{r^2}
 $$
 Vanuit symmetrieoverwegingen kan het $B$-veld enkel volgens de $x$-as zijn. Het 
-veld op een afstand $h$ van het centrum wordt dus
+veld op een afstand $x$ van het centrum wordt dus
 $$
-B_x = \frac{\mu_0 I}{4 \pi} \frac{2 \pi R}{r} \frac{R}{r}
+B = \frac{\mu_0 NI}{4 \pi} \frac{2 \pi R}{r} \frac{R}{r}
 $$
 Hier wordt de uitdrukking voor $r$, de afstand tot een elementje van de spoel, 
 ingevuld en de vergelijking wordt vereenvoudigd
 $$
-B = \frac{\mu_0 I R^2}{2(R^2+x^2)^{3/2}}
+B = \frac{\mu_0 NI R^2}{2(R^2+x^2)^{3/2}}
 $$
-Het veld in de Helmholtz spoel kan nu berekend door het veld van twee spoelen 
-op te tellen. Omdat we het veld in het midden van het apparaat nodig hebben, 
-stellen we $x$ gelijk aan $R/2$
+Het magnetische veld op grote afstand krijgt de vorm
 $$
-B = 2 \frac{\mu_0 I R^2}{{2(R^2+(R/2)^2})^{3/2}}
+B \approx \frac{\mu_0 NI R^2}{2x^3} = \frac{\mu_0}{4 \pi}\frac{2m}{x^3}
+$$
+Hier is $m$ het magnetisch dipoolmoment van de spoel, het product van de stroom 
+en de oppervlakte van de spoel.
+
+Het veld in de Helmholtz spoel kan berekend door het veld van twee spoelen op 
+te tellen.
+$$
+B = \frac{\mu_0 NI R^2}{2}\left( \frac{1}{(R^2+x^2)^{3/2}} + 
+\frac{1}{(R^2+(R-x)^2)^{3/2}} \right)
 $$
 Na vereenvoudiging bekomt men
 $$
@@ -41,8 +47,8 @@ $$
 \subsection{Baan van een elektron in een uniform magnetisch veld}
 
 De beginsnelheid van het elektron kan bepaald worden door de wet van behoud van 
-energie.  De elektronen worden vanuit rust versneld door het aangelegde 
-spanningsverschil.  De kinetische energie kan dus beschreven worden door
+energie. De elektronen worden vanuit rust versneld door het aangelegde 
+spanningsverschil $V$. De kinetische energie kan dus beschreven worden door
 $$
 \frac{mv^2}{2} = eV
 $$
@@ -86,4 +92,3 @@ Hieruit volgt de uitdrukking voor de soortelijke lading.
 $$
 \frac{e}{m} = \frac{2V}{B^2r^2}
 $$
-
