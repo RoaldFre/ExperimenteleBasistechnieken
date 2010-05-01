@@ -1,4 +1,5 @@
 \section{Voorbereiding}
+
 \subsection{Helmholtz spoel}
 
 Een Helmholtz spoel is een apparaat dat gebruikt wordt om zeer uniforme 
@@ -43,17 +44,18 @@ Een grafiek van het magnetische veld is weergegeven in figuur \ref{Bveld}.
 
 Voor deze proef wordt het veld in het midden gezocht, met $x$ gelijk aan $R/2$.
 Invullen en vereenvoudigen geeft
-$$
+\begin{equation}
+\label{Helmholtz-eq}
 B = \left(\frac{4}{5}\right)^{3/2} \frac{\mu_0 NI}{R}
-$$
-
+\end{equation}
 
 \figuurOctave{Bveld}{De grootte van het magnetisch veld in een Helmholtz spoel.  
 De groene stippellijn geeft de grootte van het apparaat aan.}
 
-Het veld buiten de centrale as is te berekenen met een veel moeilijkere 
-analyse. In dit artikel wordt die niet gegeven maar een tekening van de 
-veldlijnen wordt afgebeeld in figuur \ref{B-helmholtz}
+Dit geeft ons het magnetische veld op de centrale as. Voor de andere plaatsen 
+is geen volledig analytische afleiding mogelijk. Deze oplossing wordt hier niet 
+beschreven \cite{magnVeldHelmholtz}.
+Tekening van de veldlijnen wordt afgebeeld in figuur \ref{B-helmholtz}
 
 \figuur{width=0.6\textwidth}{B-helmholtz}{Het magnetisch veld in een helmholtz 
 spoel.}
@@ -107,3 +109,7 @@ $\mathcal{Q}$).
 $$
 \mathcal{Q} = \frac{e}{m} = \frac{2V}{B^2r^2}
 $$
+Hierin wordt de uitdrukking voor $B$ (\ref{Helmholtz-eq}) ingevuld
+\begin{equation}
+\mathcal{Q} = \frac{2V}{(4/3)^3} \left( \frac{R}{\mu_0NIr} \right)^2
+\end{equation}
