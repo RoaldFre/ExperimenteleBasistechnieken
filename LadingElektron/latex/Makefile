@@ -14,3 +14,7 @@ tex:
 
 bib:
 	bibtex ${TARGET}
+
+clean:
+	rm -f ${TARGET}.{log,aux,bbl,blg}
+	rm -f data.aux
