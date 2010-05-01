@@ -1,4 +1,4 @@
-function [a,da,daua] = linreg(x,dx,y,dy)
+function [a,da,daua] = linreg(x,y,dy)
 	w = 1./dy.^2;
 	n = length(y);
 	
