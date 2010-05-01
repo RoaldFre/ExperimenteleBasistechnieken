@@ -12,4 +12,4 @@ x=-0.5;plot(ones(30)*x,linspace(0,1.1,30),"o","markersize",1.9);
 axis([-1 1 0 1.1]);
 hold off;
 
-maakgraph("Bveld", "x/R","B/B(0)", "0.3cm", "700", "500");
+maakgraph("Bveld", "$x/R$","$B/B(0)$", "0.3cm", "700", "500");
