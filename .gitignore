@@ -3,4 +3,5 @@ lading.pdf
 .*.swp
 *.aux
 *.log
+*.bbl
 octave-core
