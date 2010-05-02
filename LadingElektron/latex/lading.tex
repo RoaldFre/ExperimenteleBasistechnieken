@@ -15,7 +15,7 @@
 \title{De soortelijke lading van het elektron}
 \date{26 april 2010}
 
-\renewcommand{\baselinestretch}{1.17}
+\renewcommand{\baselinestretch}{1.11}
 
 \newcommand{\partieel}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\partpart}[2]{\frac{\partial^2 #1}{\partial #2^2}}
@@ -53,7 +53,7 @@
 \begin{center}
 \hspace{-4cm} %hack om iets breder dan \textwidth te kunnen centreren
 \subfigure[#5]{ %sub-caption
-	\scalebox{0.9}{ %ietsje verkleinen zodat getallen niet huge
+	\scalebox{0.94}{ %ietsje verkleinen zodat getallen niet huge
 		\nonstopmode
 		\input{afbeeldingen/#4.tex}
 		\errorstopmode
@@ -65,7 +65,7 @@
 \rule{0.6cm}{0cm} %spacer zodat axis labels niet overlappen
 %
 \subfigure[#7]{
-	\scalebox{0.9}{ %ietsje verkleinen zodat getallen niet huge
+	\scalebox{0.94}{ %ietsje verkleinen zodat getallen niet huge
 		\nonstopmode
 		\input{afbeeldingen/#6.tex}
 		\errorstopmode
@@ -90,7 +90,8 @@
 \input{metingen.tex}
 \input{besluit.tex}
 
-\bibliographystyle{abbrv}
+\bibliographystyle{plain}
 \bibliography{verwijzingen}
 
+\input{data.tex}
 \end{document}

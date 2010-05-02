@@ -1,5 +1,4 @@
 \section{Metingen}
-\include{data}
 
 Er werden vier reeksen van metingen verricht. De eerste twee metingen 
 werden uitgevoerd bij constante spanning. De stroom werd gevari\"eerd 
@@ -34,10 +33,9 @@ Merk op dat uit de fouten van (twee van deze) waarden volgt dat het heel
 onwaarschijnlijk is dat de intercept nul zou zijn. Een lineaire regressie 
 houdt echter enkel rekening met de statistische fout. Er komt nog een 
 behoorlijke fout bij ten gevolge van een fout op de meetgegevens, zoals ook 
-later zal blijken voor de gevonden $\mathcal{Q}$-waarde.
-
-De intercepts blijken hier, met inachtneming van de instrumentele fouten, 
-klein genoeg opdat mag worden aangenomen dat ze nul zijn.
+later zal blijken voor de gevonden $\mathcal{Q}$-waarde. De intercepts blijken 
+hier, met inachtneming van de instrumentele fouten, klein genoeg opdat mag 
+worden aangenomen dat ze nul zijn.
 
 Hierom kan men het model fitten via een lineaire regressie met de intercept op 
 nul. Zo wordt enkel de helling van de beste fit verkregen. Hieruit kan de 
@@ -45,12 +43,12 @@ experimentele $\mathcal{Q}$-waarde berekend worden. De resultaten van deze fits
 staan afgebeeld in figuren \ref{constanteV} voor de metingen met constante 
 spanning en \ref{constanteI} voor de waarnemingen met constante stroom.
 
-\figuurOctaveTwee{constanteV}{Metingen met constante spanning}{reeks1}{Metingen 
-reeks 1}{reeks2}{Metingen reeks 2}
-\figuurOctaveTwee{constanteI}{Metingen met constante stroom}{reeks3}{Metingen 
-reeks 3}{reeks4}{Metingen reeks 4}
+\figuurOctaveTwee[h!]{constanteV}{Metingen met constante
+spanning}{reeks1}{175\,V}{reeks2}{250\,V}
+\figuurOctaveTwee[h!]{constanteI}{Metingen met constante stroom}{reeks3}{
+1.75\,A}{reeks4}{1.10\,A}
 
-De soortelijke lading wordt uigedrukt in teracoulomb per kilogram. De waardes 
+De soortelijke lading wordt uitgedrukt in teracoulomb per kilogram. De waardes 
 voor de soortelijke lading $\mathcal{Q}$ op deze manier bekomen zijn
 $$
 \mathcal{Q}_1 = (0.185 \pm 0.005)\,\textrm{TC/kg}
@@ -69,8 +67,12 @@ $$
 hierbij is $\mathcal{Q}_3$ waargenomen bij een stroom van $1.75$\,A en 
 $\mathcal{Q}_4$ bij een stroom van $1.10$\,A.
 
-Merk op dat deze fout weeral enkel de statistische fout is en geen rekening 
-houdt met de fouten op de meetgegevens. Het gemiddelde van deze waarden is onze 
+Merk op dat deze fout ook hier enkel de statistische fout is en geen rekening 
+houdt met de fouten op de meetgegevens. Deze fout moet correcter geschat 
+worden.  In tabel \ref{tabel-elektron} is voor elk meetpunt een waarde voor 
+$\mathcal{Q}$ en de afwijking erop berekend door middel van de fout op de 
+meetwaarden. Hieruit kan men besluiten dat de fout op het uiteindelijke 
+resultaat minstens 0.01\,TC/kg is.  Het gemiddelde van de waarden is onze 
 uiteindelijke $\mathcal{Q}$ waarde.
 \begin{center}
 {\large
@@ -78,16 +80,16 @@ uiteindelijke $\mathcal{Q}$ waarde.
 }
 \end{center}
 
-Een vergelijking met de literatuurwaarde ($\mathcal{Q}_{lit} = 
+Een vergelijking met de literatuurwaarde ($\mathcal{Q}_{\textrm{lit}} = 
 0.18\,\textrm{TC/kg}$) leert ons dat de beschreven methode een vrij correcte 
 waarde geeft voor de soortelijke lading van het elektron. Sterk opvallend is 
 dat de bekomen waarde in bijna elk geval een overschatting is (cf. tabel 
-(\ref{tabel-elektron})).
-Hier zijn enkele verklaringen voor mogelijk. De Helmholtz spoel was niet 
-stabiel gemonteerd. Door lichtjes druk uit te oefenen op het apparaat verschoof 
-de elektronenstraal zienderogen. Ook waren de omstandigheden om waarnemingen in 
-te doen niet ideaal. De elektronenstraal heeft een zeer lage intensiteit. Maar 
-om de kathetometer correct te kunnen richten, moet men een richtkruis kunnen 
-onderscheiden. Het is om die redenen dat het goed mogelijk dat er een relatief 
-grote systematische uitwijking is op de uitgelezen elektronenstraal.
-
+\ref{tabel-elektron}).
+Voor deze systematische afwijking zijn enkele verklaringen mogelijk. Zo was de 
+Helmholtz spoel bijvoorbeeld niet stabiel gemonteerd. Door lichtjes druk uit te 
+oefenen op het apparaat verschoof de elektronenstraal zienderogen. Ook waren de 
+omstandigheden om waarnemingen in te verrichten niet ideaal. De 
+elektronenstraal heeft bijvoorbeeld een zeer lage intensiteit. Maar om de 
+kathetometer correct te kunnen richten, moet men een richtkruis kunnen 
+onderscheiden. Het is om die redenen goed mogelijk dat er een relatief grote 
+systematische uitwijking is op de uitgelezen elektronenstraal.

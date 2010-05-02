@@ -3,13 +3,14 @@
 \subsection{Helmholtz spoel}
 
 Een Helmholtz spoel is een apparaat dat gebruikt wordt om zeer uniforme 
-magnetische velden aan te leggen. Het is opgebouwd uit twee spoelen met straal 
-$R$ en $N$ windingen. Ze bevinden zich op een afstand $R$ van elkaar,
-hetzelfde als de straal. Door beide spoelen stroomt dezelfde stroom $I$. De 
-opstelling staat afgebeeld in figuur \ref{helmholtz}.
+magnetische velden op te wekken. Het apparaat is opgebouwd uit twee spoelen van 
+straal $R$ en met $N$ windingen. De spoelen bevinden zich op een afstand $R$ 
+van elkaar,
+dezelfde afstand als de straal. Door beide spoelen loopt dezelfde stroom $I$.  
+De opstelling staat afgebeeld in figuur \ref{helmholtz}.
 
-%\figuur{width=0.4\textwidth}{helmholtz}{Schematische weergave van een 
-%Helmholtz spoel}
+\figuur{width=0.4\textwidth}{helmholtz}{Schematische weergave van een Helmholtz 
+spoel}
 
 Het veld van de opstelling is de som van de velden van twee aparte spoelen. Het 
 veld van \'e\'en enkele spoel op de centrale as kan berekend worden met de wet 
@@ -17,8 +18,8 @@ van Biot-Savart.
 $$
 \vec{B} = \frac{\mu_0 I}{4 \pi} \int \frac{\vec{dl} \times \hat{r}}{r^2}
 $$
-Vanuit symmetrieoverwegingen kan het $B$-veld enkel volgens de $x$-as zijn. Het 
-veld op een afstand $x$ van het centrum wordt dus
+Vanuit symmetrieoverwegingen kan het $B$-veld enkel volgens de $x$-as staan.  
+Het veld op een afstand $x$ van het centrum wordt dus
 $$
 B = \frac{\mu_0 NI}{4 \pi} \frac{2 \pi R}{r} \frac{R}{r}
 $$
@@ -32,17 +33,17 @@ $$
 B \approx \frac{\mu_0 NI R^2}{2x^3} = \frac{\mu_0}{4 \pi}\frac{2m}{x^3}
 $$
 Hier is $m$ het magnetisch dipoolmoment van de spoel, het product van de stroom 
-en de oppervlakte van de spoel.
+en de oppervlakte.
 
-Het veld in de Helmholtz spoel kan berekend door het veld van twee spoelen op 
-te tellen.
+Het veld in de Helmholtz spoel kan berekend worden door het veld van twee 
+spoelen op te tellen.
 $$
-B = \frac{\mu_0 NI R^2}{2}\left( \frac{1}{(R^2+x^2)^{3/2}} + 
-\frac{1}{(R^2+(R-x)^2)^{3/2}} \right)
+B = \frac{\mu_0 NI R^2}{2}\left( \frac{1}{(R^2+(R/2+x)^2)^{3/2}} + 
+\frac{1}{(R^2+(R/2-x)^2)^{3/2}} \right)
 $$
 Een grafiek van het magnetische veld is weergegeven in figuur \ref{Bveld}.
 
-Voor deze proef wordt het veld in het midden gezocht, met $x$ gelijk aan $R/2$.
+Voor deze proef wordt het veld in het midden gezocht, met $x$ gelijk aan $0$.
 Invullen en vereenvoudigen geeft
 \begin{equation}
 \label{Helmholtz-eq}
@@ -50,19 +51,30 @@ B = \left(\frac{4}{5}\right)^{3/2} \frac{\mu_0 NI}{R}
 \end{equation}
 
 \figuurOctave{Bveld}{De grootte van het magnetisch veld in een Helmholtz spoel.  
-De groene stippellijn geeft de grootte van het apparaat aan.}
+De groene stippellijn geeft de plaats van de spoelen aan}
 
 Dit geeft ons het magnetische veld op de centrale as. Voor de andere plaatsen 
 is geen volledig analytische afleiding mogelijk. Deze oplossing wordt hier niet 
-beschreven \cite{magnVeldHelmholtz}.
-Tekening van de veldlijnen wordt afgebeeld in figuur \ref{B-helmholtz}
+beschreven, maar kan wel gevonden worden in \cite{magnVeldHelmholtz}.
+Een tekening van de veldlijnen wordt afgebeeld in figuur \ref{B-helmholtz}.  
+Hierbij werd een doorsnede gemaakt van de spoelen, aangegeven door de zwarte 
+punten.
 
-\figuur{width=0.6\textwidth}{B-helmholtz}{Het magnetisch veld in een helmholtz 
+\figuur{width=0.45\textwidth}{B-helmholtz}{Het magnetisch veld in een helmholtz 
 spoel.}
+
+Behalve het opgewekte veld is er een ander magnetisch veld dat altijd aanwezig 
+is, het aardmagnetisch veld. Het is belangrijk na te gaan of dit veld geen 
+invloed heeft op de proef. In Leuven heeft het magnetische veld een veldsterkte 
+van ongeveer $20\,\mu$T\cite{WMM}. De hoek tussen de proefopstelling en het 
+magnetische veld is ongeveer $70^{\circ}$.  Dit betekent dat de component van 
+het magnetische veld in de richting van de proef ongeveer 6\,$\mu$T is. De 
+laagst gebruikte veldsterkte bij een meting bedroeg ongeveer 800\,$\mu$T. Het 
+aardmagnetisch veld mag dus zonder twijfel verwaarloosd worden.
 
 \subsection{Baan van een elektron in een uniform magnetisch veld}
 
-De beginsnelheid van het elektron kan bepaald worden door de wet van behoud van 
+De beginsnelheid van het elektron kan bepaald worden uit de wet van behoud van 
 energie. De elektronen worden vanuit rust versneld door het aangelegde 
 spanningsverschil $V$. De kinetische energie kan dus beschreven worden door
 $$
@@ -100,8 +112,8 @@ opgelost naar de soortelijke lading $e/m$
 $$
 \frac{e}{m} = \frac{v}{Br}
 $$
-Hier kan de uitdrukking voor snelheid rechtsreeks ingevuld worden omdat 
-deze constant blijft.
+Hier kan de uitdrukking voor snelheid rechtstreeks ingevuld worden omdat deze 
+constant blijft.
 $$
 \frac{e}{m} = \sqrt{\frac{e}{m} \frac{2V}{B^2r^2}}
 $$
@@ -113,5 +125,5 @@ $$
 Hierin wordt de uitdrukking voor $B$ (\ref{Helmholtz-eq}) ingevuld
 \begin{equation}
 \label{em-equation}
-\mathcal{Q} = \frac{2V}{(4/3)^3} \left( \frac{R}{\mu_0NIr} \right)^2
+\mathcal{Q} = \frac{2V}{(4/5)^3} \left( \frac{R}{\mu_0NIr} \right)^2
 \end{equation}
