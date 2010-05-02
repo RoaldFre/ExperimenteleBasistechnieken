@@ -1,5 +1,10 @@
 straal;
 
+width="500";
+height="400";
+yrule="0.3cm";
+ylabel="$r\\,(\\textrm{mm})$";
+
 x1 = 1./I1; dx1 = dI1./I1./I1;
 y1 = r1; dy1 = dr1;
 
@@ -20,7 +25,7 @@ q1 = 2*V1/(4/5)^3*(R/(mu*N*a1))^2;
 dauq1 = sqrt( (dV1./V1)^2 + (2*daua1)^2 );
 dq1 = dauq1*q1;
 
-maakgraph("reeks1","$1/I\\,(A^{-1})$","$r\\,(mm)$", "0.3cm","400","300");
+maakgraph("reeks1","$1/I\\,(A^{-1})$",ylabel,yrule,width,height);
 
 hold off
 
@@ -44,7 +49,7 @@ q2 = 2*V2/(4/5)^3*(R/(mu*N*a2))^2;
 dauq2 = sqrt( (dV2./V2)^2 + (2*daua2)^2 );
 dq2 = dauq2*q2;
 
-maakgraph("reeks2","$1/I\\,(A^{-1})$","$r\\,(mm)$", "0.3cm","400","300");
+maakgraph("reeks2","$1/I\\,(A^{-1})$",ylabel,yrule,width,height);
 
 hold off
 
@@ -69,7 +74,7 @@ q3 = 2/(4/5)^3*(R/(mu*N*I3*a3))^2;
 dauq3 = 2*sqrt( dI3/I3^2 + daua3^2 );
 dq3 = dauq3*q3;
 
-maakgraph("reeks3","$\\sqrt{V}\\,(V^{1/2})$","$r\\,(mm)$", "0.3cm","400","300");
+maakgraph("reeks3","$\\sqrt{V}\\,(V^{1/2})$",ylabel,yrule,width,height);
 
 hold off
 
@@ -93,6 +98,6 @@ q4 = 2/(4/5)^3*(R/(mu*N*I4*a4))^2;
 dauq4 = 2*sqrt( dI4/I4^2 + daua4^2 );
 dq4 = dauq4*q4;
 
-maakgraph("reeks4","$\\sqrt{V}\\,(V^{1/2})$","$r\\,(mm)$", "0.3cm","400","300");
+maakgraph("reeks4","$\\sqrt{V}\\,(V^{1/2})$",ylabel,yrule,width,height);
 
 hold off
