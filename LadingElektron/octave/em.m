@@ -22,7 +22,7 @@ testx1 = linspace(0,1.1,100);
 plot( testx1, 1000*a1*testx1 );
 
 q1 = 2*V1/(4/5)^3*(R/(mu*N*a1))^2;
-dauq1 = sqrt( (dV1./V1)^2 + (2*daua1)^2 );
+dauq1 = sqrt( (dV1/V1)^2 + (2*daua1)^2 );
 dq1 = dauq1*q1;
 
 maakgraph("reeks1","$1/I\\,(A^{-1})$",ylabel,yrule,width,height);
@@ -46,7 +46,7 @@ testx2 = linspace(0,1.1,100);
 plot( testx2, 1000*a2*testx2 );
 
 q2 = 2*V2/(4/5)^3*(R/(mu*N*a2))^2;
-dauq2 = sqrt( (dV2./V2)^2 + (2*daua2)^2 );
+dauq2 = sqrt( (dV2/V2)^2 + (2*daua2)^2 );
 dq2 = dauq2*q2;
 
 maakgraph("reeks2","$1/I\\,(A^{-1})$",ylabel,yrule,width,height);
@@ -54,7 +54,7 @@ maakgraph("reeks2","$1/I\\,(A^{-1})$",ylabel,yrule,width,height);
 hold off
 
 
-x3 = sqrt(V3); dx3 = dV3./sqrt(V3);
+x3 = sqrt(V3); dx3 = dV3/2./sqrt(V3);
 y3 = r3; dy3 = dr3;
 
 clf
@@ -71,14 +71,14 @@ testx3 = linspace(0,20,100);
 plot( testx3, 1000*a3*testx3 );
 
 q3 = 2/(4/5)^3*(R/(mu*N*I3*a3))^2;
-dauq3 = 2*sqrt( dI3/I3^2 + daua3^2 );
+dauq3 = 2*sqrt( (dI3/I3)^2 + daua3^2 );
 dq3 = dauq3*q3;
 
 maakgraph("reeks3","$\\sqrt{V}\\,(V^{1/2})$",ylabel,yrule,width,height);
 
 hold off
 
-x4 = sqrt(V4); dx4 = dV4./sqrt(V4);
+x4 = sqrt(V4); dx4 = dV4/2./sqrt(V4);
 y4 = r4; dy4 = dr4;
 
 clf
@@ -95,9 +95,12 @@ testx4 = linspace(0,20,100);
 plot( testx4, 1000*a4*testx4 );
 
 q4 = 2/(4/5)^3*(R/(mu*N*I4*a4))^2;
-dauq4 = 2*sqrt( dI4/I4^2 + daua4^2 );
+dauq4 = 2*sqrt( (dI4/I4)^2 + daua4^2 );
 dq4 = dauq4*q4;
 
 maakgraph("reeks4","$\\sqrt{V}\\,(V^{1/2})$",ylabel,yrule,width,height);
 
 hold off
+
+q = (q1+q2+q3+q4)/4;
+
