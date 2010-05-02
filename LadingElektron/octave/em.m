@@ -5,7 +5,7 @@ y1 = r1; dy1 = dr1;
 
 hold on
 
-h1 = errorbar( x1, y1, dx1, dx1, dy1, dy1 );
+h1 = errorbar( x1, 1000*y1, dx1, dx1, 1000*dy1, 1000*dy1 );
 set(h1,"linestyle","none");
 set(h1,"marker",".");
 
@@ -13,19 +13,14 @@ set(h1,"marker",".");
 
 testx1 = linspace(0,1.1,100);
 
-plot( testx1, a1*testx1 );
+plot( testx1, 1000*a1*testx1 );
 
 q1 = 2*V1/(4/5)^3*(R/(mu*N*a1))^2;
 dauq1 = sqrt( (dV1./V1)^2 + (2*daua1)^2 );
 dq1 = dauq1*q1;
 
+maakgraph("reeks1","$1/I\\,(A^{-1})$","$r\\,(mm)$", "0.3cm","400","300");
+
 hold off
 
-%h2 = errorbar(r2,1./I2,dr2,dr2,dI2./I2./I2,dI2./I2./I2);
-%set(h2,"linestyle","none");
-%set(h2,"marker",".");
 
-%[a2,da2,daua2] = linreg(r2,1./I2,dI2./I2./I2);
-
-%q2 = 2*V2/(4/5)^3*(R*a2/(mu*N))^2;
-%dauq2 = sqrt( (dV2./V2)^2 + 4 *daua2^2 );
