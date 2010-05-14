@@ -6,3 +6,4 @@ lading.pdf
 *.bbl
 *.blg
 octave-core
+.~lock*
