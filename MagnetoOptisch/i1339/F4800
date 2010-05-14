@@ -1,15 +1,15 @@
-Date                :       05-10-2010
-Time                :       17:18:49
-Voltage on Bank     :       4780
-Capacitance         :       28 mF
-Crowbar             :       0.08 O
-Pretrigger Points   :        192
-Sampling period     :        10
-Coil Surface        :       722
-Type of measurement :       PL
-Sample name         :       i1339
-Temperature         :       4.2
-                    :       
+%Date                :       05-10-2010
+%Time                :       17:18:49
+%Voltage on Bank     :       4780
+%Capacitance         :       28 mF
+%Crowbar             :       0.08 O
+%Pretrigger Points   :        192
+%Sampling period     :        10
+%Coil Surface        :       722
+%Type of measurement :       PL
+%Sample name         :       i1339
+%Temperature         :       4.2
+%                    :       
 -1910	-.16632	 0	 0	 .157	
 -1900	-.13832	 0	 0	 .177	
 -1890	-.13832	 0	 0	 .177	

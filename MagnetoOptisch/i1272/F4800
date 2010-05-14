@@ -1,15 +1,15 @@
-Date                :       05-11-2010
-Time                :       16:40:34
-Voltage on Bank     :       4762
-Capacitance         :       28 mF
-Crowbar             :       0.08 O
-Pretrigger Points   :        192
-Sampling period     :        10
-Coil Surface        :       722
-Type of measurement :       PL
-Sample name         :       i1272
-Temperature         :       4.2
-                    :       laser filter
+%Date                :       05-11-2010
+%Time                :       16:40:34
+%Voltage on Bank     :       4762
+%Capacitance         :       28 mF
+%Crowbar             :       0.08 O
+%Pretrigger Points   :        192
+%Sampling period     :        10
+%Coil Surface        :       722
+%Type of measurement :       PL
+%Sample name         :       i1272
+%Temperature         :       4.2
+%                    :       laser filter
 -1910	-.13832	 0	 0	 .157	
 -1900	-.13832	 0	 0	 .167	
 -1890	-.11032	 0	 0	 .157	
