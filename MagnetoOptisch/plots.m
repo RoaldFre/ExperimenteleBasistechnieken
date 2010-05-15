@@ -16,6 +16,7 @@ xlabel('Golflengte (nm)');
 ylabel('Intensiteit');
 
 %print('pics/plots/IzonderB.png', '-dpng');
-print('pics/plots/IzonderB.png', '-dpng', '-S680,510');
+print('pics/plots/IzonderB.svg', '-dsvg');
+%print('pics/plots/IzonderB.png', '-dpng', '-S680,510');
 
 hold off
