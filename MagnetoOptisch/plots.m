@@ -15,6 +15,7 @@ plot( spec3(:,1), spec3(:,3), 'm', 'linewidth', 1.9 );
 xlabel('Golflengte (nm)');
 ylabel('Intensiteit');
 
-print('pics/plots/IzonderB.png', '-dpng', '-S500,300');
+%print('pics/plots/IzonderB.png', '-dpng');
+print('pics/plots/IzonderB.png', '-dpng', '-S680,510');
 
 hold off
