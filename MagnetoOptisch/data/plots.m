@@ -10,13 +10,13 @@ hold on
 
 %plot( spec1(:,1), spec1(:,3), 'r' );
 %plot( spec2(:,1), spec2(:,3), 'm' );
-plot( spec3(:,1), spec3(:,3), 'm', 'linewidth', 1.9 );
+h = plot( spec3(:,1), spec3(:,3), 'g', 'linewidth', 1.9 );
 
 xlabel('Golflengte (nm)');
 ylabel('Intensiteit');
 
-%print('pics/plots/IzonderB.png', '-dpng');
-print('pics/plots/IzonderB.svg', '-dsvg');
-%print('pics/plots/IzonderB.png', '-dpng', '-S680,510');
+
+print('pics/plots/IzonderB.tex', '-depslatex', '-S380,260');
+
 
 hold off
