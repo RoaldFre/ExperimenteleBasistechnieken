@@ -1,23 +1,25 @@
+% Geschikt in stijgende volgorde van de golflengte
+%i1272
+%i1345
+%i1339
+
+naam = 'samples';
+
+subplot(3,1,1);
 sample = 'i1272';
+plot_sample
 
-spec1 = load([sample, '/S0']);
-spec2 = load([sample, '/S1000']);
-spec3 = load([sample, '/S2500']);
-spec4 = load([sample, '/S4800']);
+subplot(3,1,2);
+sample = 'i1345';
+plot_sample
 
-max1 = max(spec1(:,3));
-max2 = max(spec2(:,3));
-max3 = max(spec3(:,3));
-max4 = max(spec4(:,3));
+subplot(3,1,3);
+sample = 'i1339';
+plot_sample
+xlabel('$\lambda$ (nm)');
 
-hold on
 
-plot( spec1(:,1), spec1(:,3), 'r' );
-plot( spec2(:,1), spec2(:,3), 'y' );
-plot( spec3(:,1), spec3(:,3), 'g' );
-plot( spec4(:,1), spec4(:,3), 'b' );
+print([naam,'.tex'], '-depslatex', '-S400,800');
+system(['./makegraph.sh ',naam,' ../pics/plots/',naam]);
 
-hold off
 
-xlabel('Golflengte (nm)');
-ylabel('Intensiteit');
