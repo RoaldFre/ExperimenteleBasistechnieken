@@ -11,10 +11,10 @@ max4 = max(spec4(:,3));
 hold on
 
 % Alle kleuren zijn geinversed
-plot( spec1(:,1), spec1(:,3), 'c' );
-plot( spec2(:,1), spec2(:,3), 'b' );
+plot( spec1(:,1), spec1(:,3), 'b' );
+plot( spec2(:,1), spec2(:,3), 'y' );
 plot( spec3(:,1), spec3(:,3), 'm' );
-plot( spec4(:,1), spec4(:,3), 'y' );
+plot( spec4(:,1), spec4(:,3), 'c' );
 
 hold off
 

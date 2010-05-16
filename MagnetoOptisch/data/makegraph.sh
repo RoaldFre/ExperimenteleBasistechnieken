@@ -21,7 +21,7 @@ EOF
 latex $tmpname.tex
 dvipdf $tmpname.dvi
 pdfcrop $tmpname{,-crop}.pdf
-convert -negate -density 600x600 $tmpname-crop.pdf $output.png
+convert -negate -density 300x300 $tmpname-crop.pdf $output.png
 #pdftops $tmpname{-inv.pdf,.ps}
 #ps2epsi $tmpname.ps $output 
 
