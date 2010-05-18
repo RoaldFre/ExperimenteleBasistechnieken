@@ -5,7 +5,7 @@ f3 = load('i1272/F4800');
 hold on
 
 plot(f1(:,1)/1000,f1(:,4)*50,'k','linewidth',2);
-plot(f1(:,1)/1000,f1(:,3)   ,'y','linewidth',1.5);
+plot(f1(:,1)/1000,f1(:,3)   ,'r','linewidth',1.5);
 plot(f2(:,1)/1000,f2(:,3)   ,'m','linewidth',1.5);
 plot(f3(:,1)/1000,f3(:,3)   ,'c','linewidth',1.5);
 

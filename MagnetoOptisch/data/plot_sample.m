@@ -12,7 +12,7 @@ hold on
 
 % Alle kleuren zijn geinversed
 plot( spec1(:,1), spec1(:,3)/1000, 'b' );
-plot( spec2(:,1), spec2(:,3)/1000, 'y' );
+plot( spec2(:,1), spec2(:,3)/1000, 'r' );
 plot( spec3(:,1), spec3(:,3)/1000, 'm' );
 plot( spec4(:,1), spec4(:,3)/1000, 'c' );
 
